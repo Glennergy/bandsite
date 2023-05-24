@@ -1,1 +1,17 @@
-/*# sourceMappingURL=bio.css.map */
+@font-face {
+  font-family: AvenirNextLTPro;
+  src: url(../../assets/font/AvenirNextLTPro.otf) format("opentype");
+  src: url(../../assets/font/AvenirNextLTPro-Bold.otf) format("opentype");
+  src: url(../../assets/font/AvenirNextLTPro-Demi.otf) format("opentype");
+}
+* {
+  font-family: "AvenirNextLTPro";
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}/*# sourceMappingURL=bio.css.map */

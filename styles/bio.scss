@@ -1,2 +1,17 @@
 @use "./partials/mixins" as *;
 @use "./partials/fonts" as *;
+@use "./partials/fonts" as *;
+
+// Global CSS
+
+* {
+  font-family: "AvenirNextLTPro";
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
