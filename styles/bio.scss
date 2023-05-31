@@ -1,6 +1,5 @@
 @use "./partials/mixins" as *;
 @use "./partials/fonts" as *;
-@use "./partials/fonts" as *;
 @use "./partials/colors" as *;
 
 // Global CSS
@@ -22,6 +21,7 @@ a {
 .subheader {
   @include phone {
     font-size: 1.5rem;
+    line-height: 2rem;
     font-weight: 700;
     padding: 24px 16px 16px 16px;
   }
@@ -38,17 +38,25 @@ a {
 // Navigation Section
 .navbar {
   background-color: $bandsite-black;
-  height: fit-content;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 10rem;
+  @include phone {
+    height: 9.5rem;
+  }
+
+  @include tablet {
+  }
+
+  @include desktop {
+  }
 
   &__list {
     width: 100%;
     height: fit-content;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     text-align: center;
     @include phone {
       padding: 0px 16px 0px 16px;
@@ -66,16 +74,19 @@ a {
   &__item {
     display: inline-block;
     text-align: left;
+    width: 50%;
   }
 
   &__link {
     display: block;
     padding: 1.5rem;
-    font-size: 1.5rem;
-    color: $white;
+    font-weight: 600;
+    text-align: center;
+    color: $mercury;
 
     @include phone {
-      padding: 0px 16px 0px 16px;
+      padding: 8px 16px 16px 16px;
+      font-size: 1.5rem;
     }
 
     @include tablet {
@@ -84,6 +95,12 @@ a {
 
     @include desktop {
       padding: 48px 36px 36px 36px;
+    }
+
+    &--current {
+      @extend .navbar__link;
+      color: $white;
+      border-bottom: 8px solid $white;
     }
   }
 }
@@ -103,6 +120,24 @@ a {
   &--header {
     @include phone {
       padding: 24px 16px 16px 16px;
+    }
+
+    @include tablet {
+      padding: 48px 36px 36px 36px;
+    }
+
+    @include desktop {
+      padding: 48px 36px 36px 36px;
+    }
+  }
+
+  &--footer {
+    height: max-content;
+    display: inline-block;
+    @include phone {
+      width: 10rem;
+      height: 3rem;
+      padding: 24px 16px 0px 16px;
     }
 
     @include tablet {
@@ -153,6 +188,8 @@ a {
 
   &__quote {
     @include phone {
+      font-size: 14px;
+      font-weight: 600;
       padding: 24px 16px 16px 16px;
     }
 
@@ -167,6 +204,8 @@ a {
 
   &__header {
     @include phone {
+      font-size: 14px;
+      font-weight: 600;
       padding: 24px 16px 16px 16px;
     }
 
@@ -181,6 +220,9 @@ a {
 
   &__text {
     @include phone {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 18px;
       padding: 24px 16px 16px 16px;
     }
 
@@ -198,8 +240,19 @@ a {
 
 .photogallery {
   &__container {
-    display: flex;
-    flex-direction: column;
+    @include phone {
+      display: flex;
+      flex-direction: column;
+      padding: 24px 16px 16px 16px;
+    }
+
+    @include tablet {
+      padding: 48px 36px 36px 36px;
+    }
+
+    @include desktop {
+      padding: 48px 36px 36px 36px;
+    }
   }
   &__image {
     width: 90%;
@@ -220,4 +273,58 @@ a {
 
 .footer {
   background-color: $bandsite-black;
+  height: fit-content;
+
+  &__subheader {
+    color: $white;
+    @include phone {
+      padding: 24px 16px 16px 16px;
+    }
+
+    @include tablet {
+      padding: 48px 36px 36px 36px;
+    }
+
+    @include desktop {
+      padding: 48px 36px 36px 36px;
+    }
+  }
+
+  &__link {
+    @include phone {
+      padding: 24px 16px 16px 16px;
+    }
+
+    @include tablet {
+      padding: 48px 36px 36px 36px;
+    }
+
+    @include desktop {
+      padding: 48px 36px 36px 36px;
+    }
+  }
+
+  &__text {
+    color: $white;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+
+    @include phone {
+      padding: 24px 16px 16px 16px;
+    }
+
+    @include tablet {
+      padding: 48px 36px 36px 36px;
+    }
+
+    @include desktop {
+      padding: 48px 36px 36px 36px;
+    }
+
+    &--bold {
+      @extend .footer__text;
+      font-weight: 700;
+    }
+  }
 }

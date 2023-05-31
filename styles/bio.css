@@ -1,8 +1,17 @@
 @font-face {
   font-family: AvenirNextLTPro;
-  src: url(../../assets/font/AvenirNextLTPro.otf) format("opentype");
+  src: url(../../assets/font/AvenirNextLTPro-Regular.otf) format("opentype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: AvenirNextLTPro;
   src: url(../../assets/font/AvenirNextLTPro-Bold.otf) format("opentype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: AvenirNextLTPro;
   src: url(../../assets/font/AvenirNextLTPro-Demi.otf) format("opentype");
+  font-weight: 600;
 }
 * {
   font-family: "AvenirNextLTPro";
@@ -21,6 +30,7 @@ a {
 @media only screen and (min-width: 320px) {
   .subheader {
     font-size: 1.5rem;
+    line-height: 2rem;
     font-weight: 700;
     padding: 24px 16px 16px 16px;
   }
@@ -38,19 +48,22 @@ a {
 
 .navbar {
   background-color: #323232;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 10rem;
+}
+@media only screen and (min-width: 320px) {
+  .navbar {
+    height: 9.5rem;
+  }
 }
 .navbar__list {
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   text-align: center;
 }
 @media only screen and (min-width: 320px) {
@@ -71,27 +84,34 @@ a {
 .navbar__item {
   display: inline-block;
   text-align: left;
+  width: 50%;
 }
-.navbar__link {
+.navbar__link, .navbar__link--current {
   display: block;
   padding: 1.5rem;
-  font-size: 1.5rem;
-  color: #ffffff;
+  font-weight: 600;
+  text-align: center;
+  color: #e1e1e1;
 }
 @media only screen and (min-width: 320px) {
-  .navbar__link {
-    padding: 0px 16px 0px 16px;
+  .navbar__link, .navbar__link--current {
+    padding: 8px 16px 16px 16px;
+    font-size: 1.5rem;
   }
 }
 @media only screen and (min-width: 768px) {
-  .navbar__link {
+  .navbar__link, .navbar__link--current {
     padding: 48px 36px 36px 36px;
   }
 }
 @media screen and (min-width: 1280px) {
-  .navbar__link {
+  .navbar__link, .navbar__link--current {
     padding: 48px 36px 36px 36px;
   }
+}
+.navbar__link--current {
+  color: #ffffff;
+  border-bottom: 8px solid #ffffff;
 }
 
 @media only screen and (min-width: 320px) {
@@ -112,6 +132,28 @@ a {
 }
 @media screen and (min-width: 1280px) {
   .bandsite-logo--header {
+    padding: 48px 36px 36px 36px;
+  }
+}
+.bandsite-logo--footer {
+  height: -moz-max-content;
+  height: max-content;
+  display: inline-block;
+}
+@media only screen and (min-width: 320px) {
+  .bandsite-logo--footer {
+    width: 10rem;
+    height: 3rem;
+    padding: 24px 16px 0px 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .bandsite-logo--footer {
+    padding: 48px 36px 36px 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .bandsite-logo--footer {
     padding: 48px 36px 36px 36px;
   }
 }
@@ -152,6 +194,8 @@ a {
 }
 @media only screen and (min-width: 320px) {
   .about__quote {
+    font-size: 14px;
+    font-weight: 600;
     padding: 24px 16px 16px 16px;
   }
 }
@@ -167,6 +211,8 @@ a {
 }
 @media only screen and (min-width: 320px) {
   .about__header {
+    font-size: 14px;
+    font-weight: 600;
     padding: 24px 16px 16px 16px;
   }
 }
@@ -182,6 +228,9 @@ a {
 }
 @media only screen and (min-width: 320px) {
   .about__text {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
     padding: 24px 16px 16px 16px;
   }
 }
@@ -196,9 +245,22 @@ a {
   }
 }
 
-.photogallery__container {
-  display: flex;
-  flex-direction: column;
+@media only screen and (min-width: 320px) {
+  .photogallery__container {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px 16px 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .photogallery__container {
+    padding: 48px 36px 36px 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .photogallery__container {
+    padding: 48px 36px 36px 36px;
+  }
 }
 .photogallery__image {
   width: 90%;
@@ -221,4 +283,63 @@ a {
 
 .footer {
   background-color: #323232;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.footer__subheader {
+  color: #ffffff;
+}
+@media only screen and (min-width: 320px) {
+  .footer__subheader {
+    padding: 24px 16px 16px 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .footer__subheader {
+    padding: 48px 36px 36px 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__subheader {
+    padding: 48px 36px 36px 36px;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .footer__link {
+    padding: 24px 16px 16px 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .footer__link {
+    padding: 48px 36px 36px 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__link {
+    padding: 48px 36px 36px 36px;
+  }
+}
+.footer__text, .footer__text--bold {
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+@media only screen and (min-width: 320px) {
+  .footer__text, .footer__text--bold {
+    padding: 24px 16px 16px 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .footer__text, .footer__text--bold {
+    padding: 48px 36px 36px 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__text, .footer__text--bold {
+    padding: 48px 36px 36px 36px;
+  }
+}
+.footer__text--bold {
+  font-weight: 700;
 }/*# sourceMappingURL=bio.css.map */
