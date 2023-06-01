@@ -220,7 +220,7 @@ a {
       font-size: 13px;
       font-weight: 400;
       line-height: 18px;
-      padding: 24px 16px 16px 16px;
+      padding: 0px 16px 16px 16px;
     }
 
     @include tablet {
@@ -240,7 +240,7 @@ a {
     @include phone {
       display: flex;
       flex-direction: column;
-      padding: 24px 16px 16px 16px;
+      padding: 0px 16px 0px 16px;
     }
 
     @include tablet {
@@ -252,9 +252,9 @@ a {
     }
   }
   &__image {
-    width: 90%;
+    width: 100%;
     @include phone {
-      padding: 0px 16px 16px 16px;
+      padding: 0 0 16px 0;
     }
 
     @include tablet {
