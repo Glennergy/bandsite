@@ -152,19 +152,19 @@ a {
 // Hero Section
 .hero {
   display: flex;
-  height: auto;
-  background-color: $bandsite-black;
-
-  &__image {
-    height: 20%;
-    width: 100%;
-    opacity: 0.5;
-  }
+  align-items: center;
+  height: 15rem;
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
+    url("../assets/images/hero-bio.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 
   &__header {
     color: $white;
-    position: relative;
-    top: calc(50% - 60px);
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    padding: 0 16px 0 16px;
   }
 }
 // About Section
@@ -308,7 +308,7 @@ a {
     font-weight: 400;
 
     @include phone {
-      padding: 24px 16px 16px 16px;
+      padding: 0px 16px 16px 16px;
     }
 
     @include tablet {
@@ -322,6 +322,7 @@ a {
     &--bold {
       @extend .footer__text;
       font-weight: 700;
+      padding: 24px 16px 16px 16px;
     }
   }
 }
