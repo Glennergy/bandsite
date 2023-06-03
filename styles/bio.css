@@ -21,33 +21,41 @@
 
 li {
   list-style: none;
+  text-align: center;
 }
 
 a {
+  text-align: center;
   text-decoration: none;
 }
 
+.subheader, .about__subheader {
+  color: #323232;
+}
 @media only screen and (min-width: 320px) {
-  .subheader {
+  .subheader, .about__subheader {
     font-size: 1.5rem;
     font-weight: 700;
     padding: 24px 16px 16px 16px;
   }
 }
 @media only screen and (min-width: 768px) {
-  .subheader {
+  .subheader, .about__subheader {
+    font-size: 36px;
+    font-weight: 700;
     padding: 48px 36px 36px 36px;
   }
 }
 @media screen and (min-width: 1280px) {
-  .subheader {
+  .subheader, .about__subheader {
+    font-size: 36px;
+    font-weight: 700;
     padding: 48px 36px 36px 36px;
   }
 }
 
 .navbar {
   background-color: #323232;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,6 +63,13 @@ a {
 @media only screen and (min-width: 320px) {
   .navbar {
     height: 9.7rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .navbar {
+    height: 6rem;
+    flex-direction: row;
+    align-items: center;
   }
 }
 .navbar__list {
@@ -72,7 +87,12 @@ a {
 }
 @media only screen and (min-width: 768px) {
   .navbar__list {
-    padding: 48px 36px 36px 36px;
+    width: 40%;
+    height: 3rem;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    padding: 48px 16px 36px 36px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -83,10 +103,20 @@ a {
 .navbar__item {
   display: inline-block;
   text-align: left;
-  width: 50%;
+}
+@media only screen and (min-width: 320px) {
+  .navbar__item {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .navbar__item {
+    width: 29%;
+  }
 }
 .navbar__link, .navbar__link--current {
   display: block;
+  height: auto;
   padding: 1.5rem;
   font-weight: 600;
   text-align: center;
@@ -95,12 +125,17 @@ a {
 @media only screen and (min-width: 320px) {
   .navbar__link, .navbar__link--current {
     padding: 8px 16px 16px 16px;
+    width: auto;
     font-size: 1.5rem;
   }
 }
 @media only screen and (min-width: 768px) {
   .navbar__link, .navbar__link--current {
-    padding: 48px 36px 36px 36px;
+    padding: 16px 16px 16px 16px;
+    height: 2.8rem;
+    width: 7rem;
+    text-align: center;
+    font-size: 1.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -110,13 +145,28 @@ a {
 }
 .navbar__link--current {
   color: #ffffff;
-  border-bottom: 8px solid #ffffff;
 }
-
+@media only screen and (min-width: 320px) {
+  .navbar__link--current {
+    border-bottom: 8px solid #ffffff;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .navbar__link--current {
+    height: 2.8rem;
+    padding: 21px 16px 16px 16px;
+    border-bottom: 5px solid #ffffff;
+  }
+}
 @media only screen and (min-width: 320px) {
   .bandsite-logo {
     width: 10rem;
     height: 3rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .bandsite-logo {
+    width: 12rem;
   }
 }
 @media only screen and (min-width: 320px) {
@@ -160,17 +210,44 @@ a {
 .hero {
   display: flex;
   align-items: center;
-  height: 15rem;
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-bio.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media only screen and (min-width: 320px) {
+  .hero {
+    height: 15rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hero {
+    height: 35rem;
+  }
+}
 .hero__header {
   color: #ffffff;
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 700;
-  padding: 0 16px 0 16px;
+}
+@media only screen and (min-width: 320px) {
+  .hero__header {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    padding: 0 16px 0 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hero__header {
+    font-size: 60px;
+    line-height: 68px;
+    font-weight: 700;
+    padding: 0 36px 0 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__header {
+    font-size: 60px;
+    line-height: 68px;
+  }
 }
 
 .about__image {
@@ -183,6 +260,7 @@ a {
 }
 @media only screen and (min-width: 768px) {
   .about__image {
+    width: 80%;
     padding: 48px 36px 36px 36px;
   }
 }
@@ -191,6 +269,9 @@ a {
     padding: 48px 36px 36px 36px;
   }
 }
+.about__quote {
+  color: #323232;
+}
 @media only screen and (min-width: 320px) {
   .about__quote {
     padding: 24px 16px 16px 16px;
@@ -205,11 +286,15 @@ a {
   .about__quote {
     padding: 48px 36px 36px 36px;
   }
+}
+.about__header {
+  color: #000000;
 }
 @media only screen and (min-width: 320px) {
   .about__header {
     font-size: 14px;
     font-weight: 600;
+    line-height: 22px;
     padding: 24px 16px 16px 16px;
   }
 }
@@ -222,6 +307,9 @@ a {
   .about__header {
     padding: 48px 36px 36px 36px;
   }
+}
+.about__text {
+  color: #323232;
 }
 @media only screen and (min-width: 320px) {
   .about__text {
@@ -242,6 +330,9 @@ a {
   }
 }
 
+.photogallery {
+  background-color: #fafafa;
+}
 @media only screen and (min-width: 320px) {
   .photogallery__container {
     display: flex;
@@ -269,6 +360,7 @@ a {
 }
 @media only screen and (min-width: 768px) {
   .photogallery__image {
+    width: 90%;
     padding: 48px 36px 36px 36px;
   }
 }

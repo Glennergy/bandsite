@@ -12,13 +12,17 @@
 
 li {
   list-style: none;
+  text-align: center;
 }
 
 a {
+  text-align: center;
   text-decoration: none;
 }
 
 .subheader {
+  color: $bandsite-black;
+
   @include phone {
     font-size: 1.5rem;
     font-weight: 700;
@@ -26,10 +30,14 @@ a {
   }
 
   @include tablet {
+    font-size: 36px;
+    font-weight: 700;
     padding: 48px 36px 36px 36px;
   }
 
   @include desktop {
+    font-size: 36px;
+    font-weight: 700;
     padding: 48px 36px 36px 36px;
   }
 }
@@ -37,7 +45,6 @@ a {
 // Navigation Section
 .navbar {
   background-color: $bandsite-black;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,6 +53,9 @@ a {
   }
 
   @include tablet {
+    height: 6rem;
+    flex-direction: row;
+    align-items: center;
   }
 
   @include desktop {
@@ -62,7 +72,12 @@ a {
     }
 
     @include tablet {
-      padding: 48px 36px 36px 36px;
+      width: 40%;
+      height: 3rem;
+      justify-content: space-evenly;
+      text-align: center;
+      align-items: center;
+      padding: 48px 16px 36px 36px;
     }
 
     @include desktop {
@@ -73,11 +88,22 @@ a {
   &__item {
     display: inline-block;
     text-align: left;
-    width: 50%;
+
+    @include phone {
+      width: 50%;
+    }
+
+    @include tablet {
+      width: 29%;
+    }
+
+    @include desktop {
+    }
   }
 
   &__link {
     display: block;
+    height: auto;
     padding: 1.5rem;
     font-weight: 600;
     text-align: center;
@@ -85,11 +111,16 @@ a {
 
     @include phone {
       padding: 8px 16px 16px 16px;
+      width: auto;
       font-size: 1.5rem;
     }
 
     @include tablet {
-      padding: 48px 36px 36px 36px;
+      padding: 16px 16px 16px 16px;
+      height: 2.8rem;
+      width: 7rem;
+      text-align: center;
+      font-size: 1.5rem;
     }
 
     @include desktop {
@@ -99,7 +130,19 @@ a {
     &--current {
       @extend .navbar__link;
       color: $white;
-      border-bottom: 8px solid $white;
+
+      @include phone {
+        border-bottom: 8px solid $white;
+      }
+
+      @include tablet {
+        height: 2.8rem;
+        padding: 21px 16px 16px 16px;
+        border-bottom: 5px solid $white;
+      }
+
+      @include desktop {
+      }
     }
   }
 }
@@ -111,6 +154,7 @@ a {
   }
 
   @include tablet {
+    width: 12rem;
   }
 
   @include desktop {
@@ -153,23 +197,50 @@ a {
 .hero {
   display: flex;
   align-items: center;
-  height: 15rem;
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
     url("../assets/images/hero-bio.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
+  @include phone {
+    height: 15rem;
+  }
+
+  @include tablet {
+    height: 35rem;
+  }
+
+  @include desktop {
+  }
+
   &__header {
     color: $white;
-    font-size: 24px;
-    line-height: 32px;
-    font-weight: 700;
-    padding: 0 16px 0 16px;
+    @include phone {
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 700;
+      padding: 0 16px 0 16px;
+    }
+
+    @include tablet {
+      font-size: 60px;
+      line-height: 68px;
+      font-weight: 700;
+      padding: 0 36px 0 36px;
+    }
+
+    @include desktop {
+      font-size: 60px;
+      line-height: 68px;
+    }
   }
 }
 // About Section
 
 .about {
+  &__subheader {
+    @extend .subheader;
+  }
   &__image {
     width: 95%;
     @include phone {
@@ -177,6 +248,7 @@ a {
     }
 
     @include tablet {
+      width: 80%;
       padding: 48px 36px 36px 36px;
     }
 
@@ -186,6 +258,7 @@ a {
   }
 
   &__quote {
+    color: $bandsite-black;
     @include phone {
       padding: 24px 16px 16px 16px;
     }
@@ -200,9 +273,11 @@ a {
   }
 
   &__header {
+    color: $bandsite-darkblack;
     @include phone {
       font-size: 14px;
       font-weight: 600;
+      line-height: 22px;
       padding: 24px 16px 16px 16px;
     }
 
@@ -216,6 +291,7 @@ a {
   }
 
   &__text {
+    color: $bandsite-black;
     @include phone {
       font-size: 13px;
       font-weight: 400;
@@ -236,6 +312,8 @@ a {
 // Photogallery section
 
 .photogallery {
+  background-color: $alabaster;
+
   &__container {
     @include phone {
       display: flex;
@@ -258,6 +336,7 @@ a {
     }
 
     @include tablet {
+      width: 90%;
       padding: 48px 36px 36px 36px;
     }
 
