@@ -141,6 +141,10 @@ a {
       font-size: 1.5rem;
     }
 
+    &:hover {
+      color: $white;
+    }
+
     &--current {
       @extend .navbar__link;
       color: $white;
@@ -289,6 +293,8 @@ a {
     }
 
     @include desktop {
+      width: 80%;
+      height: 40%;
       padding: 0px 36px 36px 36px;
     }
   }
@@ -414,10 +420,11 @@ a {
     }
 
     @include desktop {
-      padding: 48px 36px 36px 36px;
+      padding: 0px 36px 36px 36px;
     }
   }
   &__image {
+    filter: grayscale(1);
     width: 100%;
     @include phone {
       padding: 0 0 16px 0;
@@ -431,6 +438,10 @@ a {
 
     @include desktop {
       padding: 48px 36px 36px 36px;
+    }
+
+    &:hover {
+      filter: grayscale(0);
     }
   }
 }

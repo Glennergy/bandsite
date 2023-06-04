@@ -161,6 +161,9 @@ a {
     font-size: 1.5rem;
   }
 }
+.navbar__link:hover, .navbar__link--current:hover {
+  color: #ffffff;
+}
 .navbar__link--current {
   color: #ffffff;
 }
@@ -310,6 +313,8 @@ a {
 }
 @media screen and (min-width: 1280px) {
   .about__image {
+    width: 80%;
+    height: 40%;
     padding: 0px 36px 36px 36px;
   }
 }
@@ -443,10 +448,11 @@ a {
 }
 @media screen and (min-width: 1280px) {
   .photogallery__container {
-    padding: 48px 36px 36px 36px;
+    padding: 0px 36px 36px 36px;
   }
 }
 .photogallery__image {
+  filter: grayscale(1);
   width: 100%;
 }
 @media only screen and (min-width: 320px) {
@@ -465,6 +471,9 @@ a {
   .photogallery__image {
     padding: 48px 36px 36px 36px;
   }
+}
+.photogallery__image:hover {
+  filter: grayscale(0);
 }
 
 .footer {
