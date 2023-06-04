@@ -40,7 +40,7 @@ a {
     font-size: 36px;
     font-weight: 700;
     line-height: 44px;
-    padding: 48px 36px 36px 36px;
+    padding: 48px 36px 36px 88px;
   }
 }
 
@@ -61,6 +61,9 @@ a {
   }
 
   @include desktop {
+    height: 6rem;
+    flex-direction: row;
+    align-items: center;
   }
 
   &__list {
@@ -83,6 +86,11 @@ a {
     }
 
     @include desktop {
+      width: 20%;
+      height: 3rem;
+      justify-content: space-evenly;
+      text-align: center;
+      align-items: center;
       padding: 48px 36px 36px 36px;
     }
   }
@@ -127,6 +135,10 @@ a {
 
     @include desktop {
       padding: 48px 36px 36px 36px;
+      height: 2.8rem;
+      width: 7rem;
+      text-align: center;
+      font-size: 1.5rem;
     }
 
     &--current {
@@ -144,6 +156,9 @@ a {
       }
 
       @include desktop {
+        height: 2.8rem;
+        padding: 21px 16px 16px 16px;
+        border-bottom: 5px solid $white;
       }
     }
   }
@@ -172,7 +187,7 @@ a {
     }
 
     @include desktop {
-      padding: 48px 36px 36px 36px;
+      padding: 48px 36px 36px 88px;
     }
   }
 
@@ -186,10 +201,21 @@ a {
     }
 
     @include tablet {
+      position: relative;
+      width: 8rem;
+      height: 2rem;
+      top: -324px;
+      left: 70%;
       padding: 48px 36px 36px 36px;
     }
 
     @include desktop {
+      padding: 48px 36px 36px 36px;
+      position: relative;
+      width: 8rem;
+      height: 2rem;
+      top: -420px;
+      left: 70%;
       padding: 48px 36px 36px 36px;
     }
   }
@@ -234,6 +260,7 @@ a {
     @include desktop {
       font-size: 60px;
       line-height: 68px;
+      padding: 0 88px;
     }
   }
 }
@@ -258,7 +285,7 @@ a {
       height: 500px;
       display: inline;
       margin: 0;
-      padding: 0px 36px 36px 36px;
+      padding: 36px 36px 36px 36px;
     }
 
     @include desktop {
@@ -269,7 +296,7 @@ a {
   &__quotecontainer {
     @include tablet {
       display: block;
-      width: 80%;
+      width: 100%;
       text-align: center;
     }
   }
@@ -281,17 +308,22 @@ a {
     }
 
     @include tablet {
-      width: 100%;
+      width: 80%;
       font-size: 24px;
       line-height: 32px;
       display: inline-block;
       text-align: left;
-      padding: 16px 36px 36px 80px;
+      padding: 16px 80px 36px 80px;
     }
 
     @include desktop {
       padding: 48px 36px 36px 36px;
     }
+  }
+
+  &__bottomcontainer {
+    display: flex;
+    flex-direction: column;
   }
 
   &__header {
@@ -304,11 +336,33 @@ a {
     }
 
     @include tablet {
-      padding: 48px 36px 36px 36px;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 32px;
+      padding: 48px 36px 16px 106px;
+      display: inline;
     }
 
     @include desktop {
-      padding: 48px 36px 36px 36px;
+      padding: 48px 36px 36px 168px;
+    }
+  }
+
+  &__container {
+    @include phone {
+      flex-direction: column;
+    }
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
+      padding: 0px 16px 36px 132px;
     }
   }
 
@@ -322,11 +376,19 @@ a {
     }
 
     @include tablet {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 22px;
+      width: 30%;
       padding: 48px 36px 36px 36px;
     }
 
     @include desktop {
-      padding: 48px 36px 36px 36px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 22px;
+      width: 40%;
+      padding: 0px 36px 36px 36px;
     }
   }
 }
@@ -344,7 +406,11 @@ a {
     }
 
     @include tablet {
-      padding: 48px 36px 36px 36px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      padding: 0px 36px 36px 36px;
     }
 
     @include desktop {
@@ -358,8 +424,9 @@ a {
     }
 
     @include tablet {
-      width: 90%;
-      padding: 48px 36px 36px 36px;
+      display: inline;
+      width: 27%;
+      padding: 16px 16px 16px 16px;
     }
 
     @include desktop {
@@ -380,7 +447,38 @@ a {
     }
 
     @include tablet {
+      font-size: 36px;
+      display: inline-block;
       padding: 48px 36px 36px 36px;
+    }
+
+    @include desktop {
+      padding: 48px 36px 36px 88px;
+    }
+  }
+
+  &__image {
+    @include phone {
+    }
+
+    @include tablet {
+      width: 36px;
+      height: 36px;
+    }
+
+    @include desktop {
+    }
+  }
+
+  &__icon {
+    @include phone {
+      padding: 24px 0px 16px 0px;
+    }
+
+    @include tablet {
+      font-size: 36px;
+      display: inline-block;
+      padding: 48px 36px 36px 0px;
     }
 
     @include desktop {
@@ -391,14 +489,36 @@ a {
   &__link {
     @include phone {
       padding: 24px 16px 16px 16px;
+      font-size: 10px;
     }
 
     @include tablet {
-      padding: 48px 36px 36px 36px;
+      padding: 48px 16px 0px 16px;
+      text-align: center;
+      font-size: 12px;
+      line-height: 20px;
     }
 
     @include desktop {
       padding: 48px 36px 36px 36px;
+    }
+  }
+
+  &__contact {
+    @include phone {
+    }
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      padding-left: 56px;
     }
   }
 
@@ -413,10 +533,15 @@ a {
     }
 
     @include tablet {
-      padding: 48px 36px 36px 36px;
+      font-size: 14px;
+      line-height: 18px;
+      padding: 16px 16px 16px 36px;
     }
 
     @include desktop {
+      font-size: 14px;
+      line-height: 18px;
+      text-align: left;
       padding: 48px 36px 36px 36px;
     }
 
@@ -424,6 +549,19 @@ a {
       @extend .footer__text;
       font-weight: 700;
       padding: 24px 16px 16px 16px;
+
+      @include tablet {
+        padding: 16px 16px 16px 36px;
+      }
+    }
+    &--cc {
+      @extend.footer__text;
+      @include desktop {
+        font-size: 14px;
+        line-height: 18px;
+        text-align: left;
+        padding: 48px 36px 36px 88px;
+      }
     }
   }
 }
