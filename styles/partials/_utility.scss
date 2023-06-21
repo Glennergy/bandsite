@@ -1,0 +1,255 @@
+// Navigation Section
+.navbar {
+  background-color: $bandsite-black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include phone {
+    height: 9.7rem;
+  }
+
+  @include tablet {
+    height: 6rem;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  @include desktop {
+    height: 6rem;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__list {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    @include phone {
+      padding: 0px 16px 0px 16px;
+    }
+
+    @include tablet {
+      width: 40%;
+      height: 3rem;
+      justify-content: space-evenly;
+      text-align: center;
+      align-items: center;
+      padding: 48px 0px 36px 0px;
+    }
+
+    @include desktop {
+      width: 20%;
+      height: 3rem;
+      justify-content: space-evenly;
+      text-align: center;
+      align-items: center;
+      padding: 48px 36px 36px 36px;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    text-align: left;
+
+    @include phone {
+      width: 50%;
+    }
+
+    @include tablet {
+      width: 29%;
+    }
+
+    @include desktop {
+    }
+  }
+
+  &__link {
+    display: block;
+    height: auto;
+    padding: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: $mercury;
+
+    @include phone {
+      padding: 8px 16px 16px 16px;
+      width: auto;
+      font-size: 1.5rem;
+    }
+
+    @include tablet {
+      padding: 16px 16px 16px 16px;
+      height: 2.8rem;
+      width: 7rem;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    @include desktop {
+      padding: 48px 36px 36px 36px;
+      height: 2.8rem;
+      width: 7rem;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    &:hover {
+      color: $white;
+    }
+
+    &--current {
+      @extend .navbar__link;
+      color: $white;
+
+      @include phone {
+        border-bottom: 8px solid $white;
+      }
+
+      @include tablet {
+        height: 2.8rem;
+        padding: 21px 16px 16px 16px;
+        border-bottom: 5px solid $white;
+      }
+
+      @include desktop {
+        height: 2.8rem;
+        padding: 21px 16px 16px 16px;
+        border-bottom: 5px solid $white;
+      }
+    }
+  }
+}
+
+//Footer Section
+
+.footer {
+  background-color: $bandsite-black;
+  height: fit-content;
+
+  &__subheader {
+    color: $white;
+    @include phone {
+      padding: 24px 16px 16px 16px;
+    }
+
+    @include tablet {
+      font-size: 36px;
+      display: inline-block;
+      padding: 48px 36px 36px 36px;
+    }
+
+    @include desktop {
+      padding: 48px 36px 36px 88px;
+    }
+  }
+
+  &__image {
+    @include phone {
+    }
+
+    @include tablet {
+      width: 36px;
+      height: 36px;
+    }
+
+    @include desktop {
+    }
+  }
+
+  &__icon {
+    @include phone {
+      padding: 24px 0px 16px 0px;
+    }
+
+    @include tablet {
+      font-size: 36px;
+      display: inline-block;
+      padding: 48px 36px 36px 0px;
+    }
+
+    @include desktop {
+      padding: 48px 36px 36px 36px;
+    }
+  }
+
+  &__link {
+    @include phone {
+      padding: 24px 16px 16px 16px;
+      font-size: 10px;
+    }
+
+    @include tablet {
+      padding: 48px 16px 0px 16px;
+      text-align: center;
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    @include desktop {
+      padding: 48px 36px 36px 36px;
+    }
+  }
+
+  &__contact {
+    @include phone {
+    }
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      padding-left: 56px;
+    }
+  }
+
+  &__text {
+    color: $white;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+
+    @include phone {
+      padding: 0px 16px 16px 16px;
+    }
+
+    @include tablet {
+      font-size: 14px;
+      line-height: 18px;
+      padding: 16px 16px 16px 36px;
+    }
+
+    @include desktop {
+      font-size: 14px;
+      line-height: 18px;
+      text-align: left;
+      padding: 48px 36px 36px 36px;
+    }
+
+    &--bold {
+      @extend .footer__text;
+      font-weight: 700;
+      padding: 24px 16px 16px 16px;
+
+      @include tablet {
+        padding: 16px 16px 16px 36px;
+      }
+    }
+    &--cc {
+      @extend.footer__text;
+      @include desktop {
+        font-size: 14px;
+        line-height: 18px;
+        text-align: left;
+        padding: 48px 36px 36px 88px;
+      }
+    }
+  }
+}
