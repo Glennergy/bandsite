@@ -1,3 +1,7 @@
+@use "./mixins" as *;
+@use "./fonts" as *;
+@use "./colors" as *;
+
 // Navigation Section
 .navbar {
   background-color: $bandsite-black;

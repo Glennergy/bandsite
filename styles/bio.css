@@ -13,56 +13,13 @@
   src: url(../assets/font/AvenirNextLTPro-Demi.otf) format("opentype");
   font-weight: 600;
 }
-* {
-  font-family: "AvenirNextLTPro";
-  width: auto;
-  margin: 0;
-}
-
-li {
-  list-style: none;
-  text-align: center;
-}
-
-a {
-  text-align: center;
-  text-decoration: none;
-}
-
-.subheader, .comment__subheader, .about__subheader {
-  color: #323232;
-}
-@media only screen and (min-width: 320px) {
-  .subheader, .comment__subheader, .about__subheader {
-    font-size: 1.5rem;
-    font-weight: 700;
-    padding: 24px 16px 16px 16px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .subheader, .comment__subheader, .about__subheader {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 44px;
-    padding: 48px 36px 36px 36px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .subheader, .comment__subheader, .about__subheader {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 44px;
-    padding: 48px 36px 36px 88px;
-  }
-}
-
 .navbar {
   background-color: #323232;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-@media only screen and (min-width: 320px) {
+@media only screen and (max-width: 768px) {
   .navbar {
     height: 9.7rem;
   }
@@ -89,7 +46,7 @@ a {
   justify-content: center;
   text-align: center;
 }
-@media only screen and (min-width: 320px) {
+@media only screen and (max-width: 768px) {
   .navbar__list {
     padding: 0px 16px 0px 16px;
   }
@@ -118,7 +75,7 @@ a {
   display: inline-block;
   text-align: left;
 }
-@media only screen and (min-width: 320px) {
+@media only screen and (max-width: 768px) {
   .navbar__item {
     width: 50%;
   }
@@ -136,7 +93,7 @@ a {
   text-align: center;
   color: #e1e1e1;
 }
-@media only screen and (min-width: 320px) {
+@media only screen and (max-width: 768px) {
   .navbar__link, .navbar__link--current {
     padding: 8px 16px 16px 16px;
     width: auto;
@@ -167,7 +124,7 @@ a {
 .navbar__link--current {
   color: #ffffff;
 }
-@media only screen and (min-width: 320px) {
+@media only screen and (max-width: 768px) {
   .navbar__link--current {
     border-bottom: 8px solid #ffffff;
   }
@@ -187,295 +144,6 @@ a {
   }
 }
 
-@media only screen and (min-width: 320px) {
-  .bandsite-logo {
-    width: 10rem;
-    height: 3rem;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .bandsite-logo {
-    width: 12rem;
-  }
-}
-@media only screen and (min-width: 320px) {
-  .bandsite-logo--header {
-    padding: 24px 16px 16px 16px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .bandsite-logo--header {
-    padding: 48px 36px 36px 36px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .bandsite-logo--header {
-    padding: 48px 36px 36px 88px;
-  }
-}
-.bandsite-logo--footer {
-  height: -moz-max-content;
-  height: max-content;
-  display: inline-block;
-}
-@media only screen and (min-width: 320px) {
-  .bandsite-logo--footer {
-    width: 10rem;
-    height: 3rem;
-    padding: 24px 16px 0px 16px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .bandsite-logo--footer {
-    position: relative;
-    width: 8rem;
-    height: 2rem;
-    top: -324px;
-    left: 70%;
-    padding: 48px 36px 36px 36px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .bandsite-logo--footer {
-    padding: 48px 36px 36px 36px;
-    position: relative;
-    width: 8rem;
-    height: 2rem;
-    top: -420px;
-    left: 70%;
-    padding: 48px 36px 36px 36px;
-  }
-}
-
-.hero {
-  display: flex;
-  align-items: center;
-  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-bio.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-@media only screen and (min-width: 320px) {
-  .hero {
-    height: 15rem;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .hero {
-    height: 35rem;
-  }
-}
-.hero__header {
-  color: #ffffff;
-}
-@media only screen and (min-width: 320px) {
-  .hero__header {
-    font-size: 24px;
-    line-height: 32px;
-    font-weight: 700;
-    padding: 0 16px 0 16px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .hero__header {
-    font-size: 60px;
-    line-height: 68px;
-    font-weight: 700;
-    padding: 0 36px 0 36px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .hero__header {
-    font-size: 60px;
-    line-height: 68px;
-    padding: 0 88px;
-  }
-}
-
-.about__imageholder {
-  text-align: center;
-}
-.about__image {
-  width: 95%;
-}
-@media only screen and (min-width: 320px) {
-  .about__image {
-    padding: 0px 16px 16px 16px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .about__image {
-    width: 80%;
-    height: 500px;
-    display: inline;
-    margin: 0;
-    padding: 36px 36px 36px 36px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .about__image {
-    width: 80%;
-    height: 40%;
-    padding: 0px 36px 36px 36px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .about__quotecontainer {
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
-}
-.about__quote {
-  color: #323232;
-}
-@media only screen and (min-width: 320px) {
-  .about__quote {
-    padding: 24px 16px 16px 16px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .about__quote {
-    width: 80%;
-    font-size: 24px;
-    line-height: 32px;
-    display: inline-block;
-    text-align: left;
-    padding: 16px 80px 36px 80px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .about__quote {
-    padding: 48px 36px 36px 36px;
-  }
-}
-.about__bottomcontainer {
-  display: flex;
-  flex-direction: column;
-}
-.about__header {
-  color: #000000;
-}
-@media only screen and (min-width: 320px) {
-  .about__header {
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 22px;
-    padding: 24px 16px 16px 16px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .about__header {
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 32px;
-    padding: 48px 36px 16px 106px;
-    display: inline;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .about__header {
-    padding: 48px 36px 36px 168px;
-  }
-}
-@media only screen and (min-width: 320px) {
-  .about__container {
-    flex-direction: column;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .about__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .about__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    padding: 0px 16px 36px 132px;
-  }
-}
-.about__text {
-  color: #323232;
-}
-@media only screen and (min-width: 320px) {
-  .about__text {
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 18px;
-    padding: 0px 16px 16px 16px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .about__text {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 22px;
-    width: 30%;
-    padding: 48px 36px 36px 36px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .about__text {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 22px;
-    width: 40%;
-    padding: 0px 36px 36px 36px;
-  }
-}
-
-.photogallery {
-  background-color: #fafafa;
-}
-@media only screen and (min-width: 320px) {
-  .photogallery__container {
-    display: flex;
-    flex-direction: column;
-    padding: 0px 16px 0px 16px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .photogallery__container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 0px 36px 36px 36px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .photogallery__container {
-    padding: 0px 36px 36px 36px;
-  }
-}
-.photogallery__image {
-  filter: grayscale(1);
-  width: 100%;
-}
-@media only screen and (min-width: 320px) {
-  .photogallery__image {
-    padding: 0 0 16px 0;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .photogallery__image {
-    display: inline;
-    width: 27%;
-    padding: 16px 16px 16px 16px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .photogallery__image {
-    padding: 48px 36px 36px 36px;
-  }
-}
-.photogallery__image:hover {
-  filter: grayscale(0);
-}
-
 .footer {
   background-color: #323232;
   height: -moz-fit-content;
@@ -484,7 +152,7 @@ a {
 .footer__subheader {
   color: #ffffff;
 }
-@media only screen and (min-width: 320px) {
+@media only screen and (max-width: 768px) {
   .footer__subheader {
     padding: 24px 16px 16px 16px;
   }
@@ -507,7 +175,7 @@ a {
     height: 36px;
   }
 }
-@media only screen and (min-width: 320px) {
+@media only screen and (max-width: 768px) {
   .footer__icon {
     padding: 24px 0px 16px 0px;
   }
@@ -524,7 +192,7 @@ a {
     padding: 48px 36px 36px 36px;
   }
 }
-@media only screen and (min-width: 320px) {
+@media only screen and (max-width: 768px) {
   .footer__link {
     padding: 24px 16px 16px 16px;
     font-size: 10px;
@@ -564,7 +232,7 @@ a {
   line-height: 18px;
   font-weight: 400;
 }
-@media only screen and (min-width: 320px) {
+@media only screen and (max-width: 768px) {
   .footer__text, .footer__text--cc, .footer__text--bold {
     padding: 0px 16px 16px 16px;
   }
@@ -600,4 +268,336 @@ a {
     text-align: left;
     padding: 48px 36px 36px 88px;
   }
+}
+
+* {
+  font-family: "AvenirNextLTPro";
+  width: auto;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  text-align: center;
+}
+
+a {
+  text-align: center;
+  text-decoration: none;
+}
+
+.subheader, .comment__subheader, .about__subheader {
+  color: #323232;
+}
+@media only screen and (max-width: 768px) {
+  .subheader, .comment__subheader, .about__subheader {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 24px 16px 16px 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .subheader, .comment__subheader, .about__subheader {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    padding: 48px 36px 36px 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .subheader, .comment__subheader, .about__subheader {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    padding: 48px 36px 36px 88px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .bandsite-logo {
+    width: 10rem;
+    height: 3rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .bandsite-logo {
+    width: 12rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .bandsite-logo--header {
+    padding: 24px 16px 16px 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .bandsite-logo--header {
+    padding: 48px 36px 36px 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .bandsite-logo--header {
+    padding: 48px 36px 36px 88px;
+  }
+}
+.bandsite-logo--footer {
+  height: -moz-max-content;
+  height: max-content;
+  display: inline-block;
+}
+@media only screen and (max-width: 768px) {
+  .bandsite-logo--footer {
+    width: 10rem;
+    height: 3rem;
+    padding: 24px 16px 0px 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .bandsite-logo--footer {
+    position: relative;
+    width: 8rem;
+    height: 2rem;
+    top: -324px;
+    left: 70%;
+    padding: 48px 36px 36px 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .bandsite-logo--footer {
+    padding: 48px 36px 36px 36px;
+    position: relative;
+    width: 8rem;
+    height: 2rem;
+    top: -420px;
+    left: 70%;
+    padding: 48px 36px 36px 36px;
+  }
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-bio.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media only screen and (max-width: 768px) {
+  .hero {
+    height: 15rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hero {
+    height: 35rem;
+  }
+}
+.hero__header {
+  color: #ffffff;
+}
+@media only screen and (max-width: 768px) {
+  .hero__header {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    padding: 0 16px 0 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hero__header {
+    font-size: 60px;
+    line-height: 68px;
+    font-weight: 700;
+    padding: 0 36px 0 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__header {
+    font-size: 60px;
+    line-height: 68px;
+    padding: 0 88px;
+  }
+}
+
+.about__imageholder {
+  text-align: center;
+}
+.about__image {
+  width: 95%;
+}
+@media only screen and (max-width: 768px) {
+  .about__image {
+    padding: 0px 16px 16px 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .about__image {
+    width: 80%;
+    height: 500px;
+    display: inline;
+    margin: 0;
+    padding: 36px 36px 36px 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about__image {
+    width: 80%;
+    height: 40%;
+    padding: 0px 36px 36px 36px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .about__quotecontainer {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+.about__quote {
+  color: #323232;
+}
+@media only screen and (max-width: 768px) {
+  .about__quote {
+    padding: 24px 16px 16px 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .about__quote {
+    width: 80%;
+    font-size: 24px;
+    line-height: 32px;
+    display: inline-block;
+    text-align: left;
+    padding: 16px 80px 36px 80px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about__quote {
+    padding: 48px 36px 36px 36px;
+  }
+}
+.about__bottomcontainer {
+  display: flex;
+  flex-direction: column;
+}
+.about__header {
+  color: #000000;
+}
+@media only screen and (max-width: 768px) {
+  .about__header {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    padding: 24px 16px 16px 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .about__header {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    padding: 48px 36px 16px 106px;
+    display: inline;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about__header {
+    padding: 48px 36px 36px 168px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .about__container {
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .about__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding: 0px 16px 36px 132px;
+  }
+}
+.about__text {
+  color: #323232;
+}
+@media only screen and (max-width: 768px) {
+  .about__text {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    padding: 0px 16px 16px 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .about__text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    width: 30%;
+    padding: 48px 36px 36px 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about__text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    width: 40%;
+    padding: 0px 36px 36px 36px;
+  }
+}
+
+.photogallery {
+  background-color: #fafafa;
+}
+@media only screen and (max-width: 768px) {
+  .photogallery__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 16px 0px 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .photogallery__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0px 36px 36px 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .photogallery__container {
+    padding: 0px 36px 36px 36px;
+  }
+}
+.photogallery__image {
+  filter: grayscale(1);
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .photogallery__image {
+    padding: 0 0 16px 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .photogallery__image {
+    display: inline;
+    width: 27%;
+    padding: 16px 16px 16px 16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .photogallery__image {
+    padding: 48px 36px 36px 36px;
+  }
+}
+.photogallery__image:hover {
+  filter: grayscale(0);
 }/*# sourceMappingURL=bio.css.map */
