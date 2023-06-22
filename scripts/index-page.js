@@ -1,5 +1,6 @@
 const comment = document.getElementById("CommentForm");
 
+// Function creates new post
 comment.addEventListener("submit", function (e) {
   e.preventDefault();
   let commentsection = document.querySelector(".comment__section");
@@ -32,9 +33,15 @@ comment.addEventListener("submit", function (e) {
   newcomment.classList.add("comment__body");
   newcomment.innerHTML = commentinput;
 
+  let newline = document.createElement("hr");
+  newline.classList.add("comment__divide--solid");
+
+  // Prepend new comment in comment section
+
   commentsection.prepend(newpostsitem);
   newpostsitem.appendChild(newpostsinfo);
   newpostsinfo.appendChild(newpostsuname);
   newpostsinfo.appendChild(newpostdate);
   newpostsitem.appendChild(newcomment);
+  newpostsitem.appendChild(newline);
 });
