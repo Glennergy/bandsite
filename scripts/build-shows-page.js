@@ -43,7 +43,7 @@ showlist.forEach((showinfo) => {
   let showlocation = showinfo.location;
 
   let newrow = document.createElement("tr");
-  newrow.classList.add("shows__row--" + count);
+  newrow.classList.add("shows__row");
   let newdate = document.createElement("td");
   newdate.innerHTML = showdate;
   let newvenue = document.createElement("td");
@@ -53,8 +53,9 @@ showlist.forEach((showinfo) => {
   let newbuttonrow = document.createElement("td");
 
   let newbutton = document.createElement("button");
-  newbutton.classList.add("shows__button--row" + count++);
+  newbutton.classList.add("shows__button");
   newbutton.innerHTML = "Buy Tickets";
+  newbutton.addEventListener("click", buttonclick);
 
   showtable.appendChild(newrow);
   newrow.appendChild(newdate);
@@ -65,3 +66,14 @@ showlist.forEach((showinfo) => {
 });
 
 // Function for changing row if buy tickets button is clicked
+
+const buttons = document.querySelectorAll(".shows__button");
+
+function buttonclick(event) {
+  event.preventDefault();
+
+  let selectrow = event.target.closest("tr");
+  selectrow.classList.add("shows__row--selected");
+
+  //   console.log(event.target.class);
+}

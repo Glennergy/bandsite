@@ -2,3 +2,128 @@
 @use "./partials/fonts" as *;
 @use "./partials/colors" as *;
 @use "./partials/utility" as *;
+
+// Global CSS
+
+* {
+  font-family: "AvenirNextLTPro";
+  width: auto;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  text-align: center;
+}
+
+a {
+  text-align: center;
+  text-decoration: none;
+}
+
+.bandsite-logo {
+  @include phone {
+    width: 10rem;
+    height: 3rem;
+  }
+
+  @include tablet {
+    width: 12rem;
+  }
+
+  @include desktop {
+  }
+
+  &--header {
+    @include phone {
+      padding: 24px 16px 16px 16px;
+    }
+
+    @include tablet {
+      padding: 48px 36px 36px 36px;
+    }
+
+    @include desktop {
+      padding: 48px 36px 36px 88px;
+    }
+  }
+
+  &--footer {
+    height: max-content;
+    display: inline-block;
+    @include phone {
+      width: 10rem;
+      height: 3rem;
+      padding: 24px 16px 0px 16px;
+    }
+
+    @include tablet {
+      position: relative;
+      width: 8rem;
+      height: 2rem;
+      top: -324px;
+      left: 70%;
+      padding: 48px 36px 36px 36px;
+    }
+
+    @include desktop {
+      padding: 48px 36px 36px 36px;
+      position: relative;
+      width: 8rem;
+      height: 2rem;
+      top: -420px;
+      left: 70%;
+      padding: 48px 36px 36px 36px;
+    }
+  }
+}
+
+// Hero Section
+.hero {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
+    url("../assets/images/hero-bio.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include phone {
+    height: 15rem;
+  }
+
+  @include tablet {
+    height: 35rem;
+  }
+
+  @include desktop {
+  }
+
+  &__header {
+    color: $white;
+    @include phone {
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 700;
+      padding: 0 16px 0 16px;
+    }
+
+    @include tablet {
+      font-size: 60px;
+      line-height: 68px;
+      font-weight: 700;
+      padding: 0 36px 0 36px;
+    }
+
+    @include desktop {
+      font-size: 60px;
+      line-height: 68px;
+      padding: 0 88px;
+    }
+  }
+}
+
+// Shows sections
+
+.shows__row--selected {
+  background-color: blue;
+}

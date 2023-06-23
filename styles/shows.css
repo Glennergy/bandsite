@@ -268,4 +268,128 @@
     text-align: left;
     padding: 48px 36px 36px 88px;
   }
+}
+
+* {
+  font-family: "AvenirNextLTPro";
+  width: auto;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  text-align: center;
+}
+
+a {
+  text-align: center;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .bandsite-logo {
+    width: 10rem;
+    height: 3rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .bandsite-logo {
+    width: 12rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .bandsite-logo--header {
+    padding: 24px 16px 16px 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .bandsite-logo--header {
+    padding: 48px 36px 36px 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .bandsite-logo--header {
+    padding: 48px 36px 36px 88px;
+  }
+}
+.bandsite-logo--footer {
+  height: -moz-max-content;
+  height: max-content;
+  display: inline-block;
+}
+@media only screen and (max-width: 768px) {
+  .bandsite-logo--footer {
+    width: 10rem;
+    height: 3rem;
+    padding: 24px 16px 0px 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .bandsite-logo--footer {
+    position: relative;
+    width: 8rem;
+    height: 2rem;
+    top: -324px;
+    left: 70%;
+    padding: 48px 36px 36px 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .bandsite-logo--footer {
+    padding: 48px 36px 36px 36px;
+    position: relative;
+    width: 8rem;
+    height: 2rem;
+    top: -420px;
+    left: 70%;
+    padding: 48px 36px 36px 36px;
+  }
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-bio.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media only screen and (max-width: 768px) {
+  .hero {
+    height: 15rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hero {
+    height: 35rem;
+  }
+}
+.hero__header {
+  color: #ffffff;
+}
+@media only screen and (max-width: 768px) {
+  .hero__header {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    padding: 0 16px 0 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hero__header {
+    font-size: 60px;
+    line-height: 68px;
+    font-weight: 700;
+    padding: 0 36px 0 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__header {
+    font-size: 60px;
+    line-height: 68px;
+    padding: 0 88px;
+  }
+}
+
+.shows__row--selected {
+  background-color: blue;
 }/*# sourceMappingURL=shows.css.map */
