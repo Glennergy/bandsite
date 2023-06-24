@@ -20,22 +20,64 @@ a {
   text-align: center;
   text-decoration: none;
 }
+
 label {
-  padding-top: 16px;
   color: $silver;
-  font-weight: 600;
-  font-size: 18px;
+  @include phone {
+    padding-top: 16px;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 20px;
+  }
+  @include tablet {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  @include desktop {
+    font-size: 12px;
+    line-height: 20px;
+  }
 }
+
 input {
   margin-top: 16px;
   margin-bottom: 16px;
-  width: 22rem;
-  height: 20px;
+  width: 97%;
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 0;
+  border-color: $mercury;
+  border-radius: 10px;
+  border-style: solid;
+  text-align: start;
+  border-width: 1px;
+  background-color: $alabaster;
+
+  &:active {
+    border-color: $bandsite-black;
+    border-width: 1px;
+  }
+
+  &::placeholder {
+    color: $bandsite-black;
+  }
 }
+
 textarea {
   margin-top: 16px;
   margin-bottom: 16px;
-  width: 22rem;
+  width: 97%;
+  height: 10rem;
+  padding-left: 10px;
+  padding-top: 10px;
+  border-color: $mercury;
+  border-radius: 10px;
+  border-style: solid;
+  background-color: $alabaster;
+  &::placeholder {
+    color: $bandsite-black;
+  }
 }
 
 .subheader {
@@ -171,6 +213,7 @@ textarea {
 
   &__formdivide {
     padding-bottom: 16px;
+    width: 100%;
   }
 
   &__imageholder {
@@ -361,8 +404,14 @@ textarea {
   &__button {
     background-color: $bandsite-black;
     color: $white;
-    height: 40px;
-    width: 150px;
+    border-image: none;
+    border-style: none;
+    @include phone {
+      height: 40px;
+      width: 100%;
+      text-align: center;
+      border-radius: 5px;
+    }
 
     &:hover {
       background-color: $bandsite-darkblack;
@@ -457,6 +506,8 @@ textarea {
 
   &__divide {
     margin: 0 16px 0 16px;
+    stroke-width: 1px;
+    color: $mercury;
     &--thin {
       @extend .comment__divide;
     }
