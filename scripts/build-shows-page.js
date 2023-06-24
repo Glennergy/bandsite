@@ -71,9 +71,25 @@ const buttons = document.querySelectorAll(".shows__button");
 
 function buttonclick(event) {
   event.preventDefault();
+  // checks if selected class has already been added to a row
+  let check = document.querySelectorAll(".shows__row--selected").length > 0;
 
-  let selectrow = event.target.closest("tr");
-  selectrow.classList.add("shows__row--selected");
-
+  // if selected class is present in table, removes class and add class to new row
+  if (check == true) {
+    let closesttr = event.target.closest("tr");
+    if (closesttr.classList.contains("shows__row--selected") == true) {
+      closesttr.classList.remove("shows__row--selected");
+    } else {
+      let removeselect = document.querySelectorAll(".shows__row--selected");
+      removeselect.forEach((show) => {
+        show.classList.remove("shows__row--selected");
+      });
+      let selectrow = event.target.closest("tr");
+      selectrow.classList.add("shows__row--selected");
+    }
+  } else {
+    let selectrow = event.target.closest("tr");
+    selectrow.classList.add("shows__row--selected");
+  }
   //   console.log(event.target.class);
 }
