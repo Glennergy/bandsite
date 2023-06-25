@@ -170,6 +170,18 @@ a {
     }
   }
 
+  &__table {
+    @include phone {
+      width: 100%;
+    }
+
+    @include tablet {
+    }
+
+    @include desktop {
+    }
+  }
+
   &__row {
     @include phone {
       display: flex;
@@ -269,6 +281,43 @@ a {
   &__button-row {
     @include phone {
       margin: 16px;
+    }
+
+    @include tablet {
+    }
+
+    @include desktop {
+    }
+  }
+
+  &__button {
+    height: 40px;
+    color: $white;
+    background-color: $bandsite-black;
+    border-radius: 5px;
+    border-image: none;
+    border-style: none;
+    text-align: center;
+
+    @include phone {
+      width: 100%;
+    }
+
+    @include tablet {
+    }
+
+    @include desktop {
+    }
+    &:hover {
+      background-color: $bandsite-darkblack;
+    }
+  }
+
+  &__divide--solid {
+    @include phone {
+      width: 100%;
+      stroke-width: 1px;
+      color: $mercury;
     }
 
     @include tablet {

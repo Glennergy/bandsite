@@ -60,7 +60,10 @@ showlist.forEach((showinfo) => {
   newbutton.classList.add("shows__button");
   newbutton.innerHTML = "Buy Tickets";
   newbutton.addEventListener("click", buttonclick);
+  let newline = document.createElement("hr");
+  newline.classList.add("shows__divide--solid");
 
+  showtable.appendChild(newline);
   showtable.appendChild(newrow);
   newrow.appendChild(newdate);
   newrow.appendChild(newvenue);
