@@ -80,37 +80,48 @@ a {
 
 // Hero Section
 .hero {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
     url("../assets/images/hero-bio.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
   @include phone {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
     height: 25rem;
   }
 
   @include tablet {
-    height: 35rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    height: 30rem;
   }
 
   @include desktop {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 30rem;
   }
 
   &__subheader {
     color: $white;
     @include phone {
+      font-size: 18px;
       margin: 32px 16px 32px 16px;
     }
 
     @include tablet {
+      font-size: 18px;
       margin: 32px 16px 32px 16px;
     }
 
     @include desktop {
+      font-size: 18px;
       margin: 32px 16px 32px 16px;
     }
   }
@@ -128,13 +139,13 @@ a {
       font-size: 60px;
       line-height: 68px;
       font-weight: 700;
-      padding: 0 36px 0 36px;
+      padding: 0 16px 0 16px;
     }
 
     @include desktop {
       font-size: 60px;
       line-height: 68px;
-      padding: 0 88px;
+      padding: 0 16px;
     }
   }
 
@@ -146,9 +157,11 @@ a {
 
     @include tablet {
       margin: 32px 16px 32px 16px;
+      width: 60%;
     }
 
     @include desktop {
+      width: 25%;
       margin: 32px 16px 32px 16px;
     }
   }
@@ -156,6 +169,17 @@ a {
 
 // Shows sections
 .shows {
+  @include phone {
+  }
+
+  @include tablet {
+  }
+
+  @include desktop {
+    height: 24rem;
+    align-items: center;
+  }
+
   &__subheader {
     @include phone {
       margin: 32px 16px 32px 16px;
@@ -166,19 +190,40 @@ a {
     }
 
     @include desktop {
-      margin: 32px 16px 32px 16px;
+      margin: 0px 16px 32px 16px;
     }
   }
 
-  &__table {
+  &__container {
     @include phone {
-      width: 100%;
     }
 
     @include tablet {
     }
 
     @include desktop {
+      height: 20rem;
+      display: flex;
+      padding: 32px 16px 16px 16px;
+      justify-content: space-around;
+    }
+  }
+
+  &__table {
+    @include phone {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    @include tablet {
+      border-collapse: collapse;
+      width: 100%;
+      padding: 0 16px 0 16px;
+    }
+
+    @include desktop {
+      border-collapse: collapse;
+      width: 80%;
     }
   }
 
@@ -187,27 +232,38 @@ a {
       display: flex;
       flex-direction: column;
       height: auto;
+      border-bottom: 1px solid $mercury;
     }
 
     @include tablet {
+      height: auto;
+      padding: 16px 0 16px 0;
+      border-collapse: collapse;
     }
 
     @include desktop {
+      border-collapse: collapse;
+
+      border-bottom: 1px solid black;
     }
     &--selected {
+      border-collapse: collapse;
       background-color: $mercury;
+      border-bottom: 1px solid black;
     }
   }
 
   &__table-header {
+    color: $silver;
     @include phone {
-      color: $silver;
-      font-size: 14px;
-      font-weight: 600;
       display: none;
     }
 
     @include tablet {
+      text-align: left;
+      font-weight: 600;
+      font-size: 14px;
+      font-weight: 600;
     }
 
     @include desktop {
@@ -230,9 +286,16 @@ a {
     }
 
     @include tablet {
+      font-size: 14px;
+      margin: 16px;
+      font-weight: 600;
+      border-bottom: 1px solid $mercury;
     }
 
     @include desktop {
+      font-size: 14px;
+      margin: 16px;
+      font-weight: 600;
     }
   }
 
@@ -251,9 +314,14 @@ a {
     }
 
     @include tablet {
+      font-size: 14px;
+      margin: 16px;
+      border-bottom: 1px solid $mercury;
     }
 
     @include desktop {
+      font-size: 14px;
+      margin: 16px;
     }
   }
 
@@ -272,9 +340,13 @@ a {
     }
 
     @include tablet {
+      font-size: 14px;
+      border-bottom: 1px solid $mercury;
     }
 
     @include desktop {
+      font-size: 14px;
+      border-bottom: 1px solid $mercury;
     }
   }
 
@@ -284,9 +356,13 @@ a {
     }
 
     @include tablet {
+      margin: 16px;
+      border-bottom: 1px solid $mercury;
     }
 
     @include desktop {
+      margin: 16px;
+      border-bottom: 1px solid $mercury;
     }
   }
 
@@ -298,15 +374,23 @@ a {
     border-image: none;
     border-style: none;
     text-align: center;
+    font-weight: bold;
 
     @include phone {
       width: 100%;
+      font-size: 12px;
+      line-height: 20px;
     }
 
     @include tablet {
+      width: 100%;
+      font-size: 12px;
+      line-height: 20px;
     }
 
     @include desktop {
+      font-size: 12px;
+      line-height: 20px;
     }
     &:hover {
       background-color: $bandsite-darkblack;
@@ -321,9 +405,15 @@ a {
     }
 
     @include tablet {
+      width: 100%;
+      stroke-width: 1px;
+      color: $mercury;
     }
 
     @include desktop {
+      width: 100%;
+      stroke-width: 1px;
+      color: $mercury;
     }
   }
 }

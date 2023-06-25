@@ -356,21 +356,34 @@ a {
 }
 
 .hero {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-bio.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 @media only screen and (max-width: 768px) {
   .hero {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
     height: 25rem;
   }
 }
 @media only screen and (min-width: 768px) {
   .hero {
-    height: 35rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    height: 30rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 30rem;
   }
 }
 .hero__subheader {
@@ -378,16 +391,19 @@ a {
 }
 @media only screen and (max-width: 768px) {
   .hero__subheader {
+    font-size: 18px;
     margin: 32px 16px 32px 16px;
   }
 }
 @media only screen and (min-width: 768px) {
   .hero__subheader {
+    font-size: 18px;
     margin: 32px 16px 32px 16px;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__subheader {
+    font-size: 18px;
     margin: 32px 16px 32px 16px;
   }
 }
@@ -407,14 +423,14 @@ a {
     font-size: 60px;
     line-height: 68px;
     font-weight: 700;
-    padding: 0 36px 0 36px;
+    padding: 0 16px 0 16px;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__header {
     font-size: 60px;
     line-height: 68px;
-    padding: 0 88px;
+    padding: 0 16px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -426,14 +442,22 @@ a {
 @media only screen and (min-width: 768px) {
   .hero__player {
     margin: 32px 16px 32px 16px;
+    width: 60%;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__player {
+    width: 25%;
     margin: 32px 16px 32px 16px;
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .shows {
+    height: 24rem;
+    align-items: center;
+  }
+}
 @media only screen and (max-width: 768px) {
   .shows__subheader {
     margin: 32px 16px 32px 16px;
@@ -446,12 +470,34 @@ a {
 }
 @media screen and (min-width: 1280px) {
   .shows__subheader {
-    margin: 32px 16px 32px 16px;
+    margin: 0px 16px 32px 16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__container {
+    height: 20rem;
+    display: flex;
+    padding: 32px 16px 16px 16px;
+    justify-content: space-around;
   }
 }
 @media only screen and (max-width: 768px) {
   .shows__table {
+    border-collapse: collapse;
     width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .shows__table {
+    border-collapse: collapse;
+    width: 100%;
+    padding: 0 16px 0 16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__table {
+    border-collapse: collapse;
+    width: 80%;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -459,17 +505,41 @@ a {
     display: flex;
     flex-direction: column;
     height: auto;
+    border-bottom: 1px solid #e1e1e1;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .shows__row {
+    height: auto;
+    padding: 16px 0 16px 0;
+    border-collapse: collapse;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__row {
+    border-collapse: collapse;
+    border-bottom: 1px solid black;
   }
 }
 .shows__row--selected {
+  border-collapse: collapse;
   background-color: #e1e1e1;
+  border-bottom: 1px solid black;
+}
+.shows__table-header {
+  color: #afafaf;
 }
 @media only screen and (max-width: 768px) {
   .shows__table-header {
-    color: #afafaf;
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .shows__table-header {
+    text-align: left;
+    font-weight: 600;
     font-size: 14px;
     font-weight: 600;
-    display: none;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -486,6 +556,21 @@ a {
     margin-bottom: 16px;
   }
 }
+@media only screen and (min-width: 768px) {
+  .shows__date {
+    font-size: 14px;
+    margin: 16px;
+    font-weight: 600;
+    border-bottom: 1px solid #e1e1e1;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__date {
+    font-size: 14px;
+    margin: 16px;
+    font-weight: 600;
+  }
+}
 @media only screen and (max-width: 768px) {
   .shows__venue {
     margin: 16px;
@@ -497,6 +582,19 @@ a {
     font-weight: 600;
     display: block;
     margin-bottom: 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .shows__venue {
+    font-size: 14px;
+    margin: 16px;
+    border-bottom: 1px solid #e1e1e1;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__venue {
+    font-size: 14px;
+    margin: 16px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -512,9 +610,33 @@ a {
     margin-bottom: 16px;
   }
 }
+@media only screen and (min-width: 768px) {
+  .shows__location {
+    font-size: 14px;
+    border-bottom: 1px solid #e1e1e1;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__location {
+    font-size: 14px;
+    border-bottom: 1px solid #e1e1e1;
+  }
+}
 @media only screen and (max-width: 768px) {
   .shows__button-row {
     margin: 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .shows__button-row {
+    margin: 16px;
+    border-bottom: 1px solid #e1e1e1;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__button-row {
+    margin: 16px;
+    border-bottom: 1px solid #e1e1e1;
   }
 }
 .shows__button {
@@ -526,16 +648,46 @@ a {
      border-image: none;
   border-style: none;
   text-align: center;
+  font-weight: bold;
 }
 @media only screen and (max-width: 768px) {
   .shows__button {
     width: 100%;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .shows__button {
+    width: 100%;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__button {
+    font-size: 12px;
+    line-height: 20px;
   }
 }
 .shows__button:hover {
   background-color: #000000;
 }
 @media only screen and (max-width: 768px) {
+  .shows__divide--solid {
+    width: 100%;
+    stroke-width: 1px;
+    color: #e1e1e1;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .shows__divide--solid {
+    width: 100%;
+    stroke-width: 1px;
+    color: #e1e1e1;
+  }
+}
+@media screen and (min-width: 1280px) {
   .shows__divide--solid {
     width: 100%;
     stroke-width: 1px;
