@@ -3,32 +3,32 @@ let showlist = [
   {
     date: "Mon Sept 06 2021",
     venue: "Ronald Lane",
-    location: "San Francisco",
+    location: "San Francisco, CA",
   },
   {
     date: "Tue Sept 21 2021",
     venue: "Pier 3 East",
-    location: "San Francisco",
+    location: "San Francisco, CA",
   },
   {
     date: "Fri Oct 15 2021",
     venue: "View Lounge",
-    location: "San Francisco",
+    location: "San Francisco, CA",
   },
   {
     date: "Sat Nov 06 2021",
     venue: "Hyatt Agency",
-    location: "San Francisco",
+    location: "San Francisco, CA",
   },
   {
     date: "Fri Nov 26 2021",
     venue: "Moscow Center",
-    location: "San Francisco",
+    location: "San Francisco, CA",
   },
   {
     date: "Wed Dec 15 2021",
     venue: "Press Club",
-    location: "San Francisco",
+    location: "San Francisco, CA",
   },
 ];
 
@@ -46,11 +46,15 @@ showlist.forEach((showinfo) => {
   newrow.classList.add("shows__row");
   let newdate = document.createElement("td");
   newdate.innerHTML = showdate;
+  newdate.classList.add("shows__date");
   let newvenue = document.createElement("td");
   newvenue.innerHTML = showvenue;
+  newvenue.classList.add("shows__venue");
   let newlocation = document.createElement("td");
   newlocation.innerHTML = showlocation;
+  newlocation.classList.add("shows__location");
   let newbuttonrow = document.createElement("td");
+  newbuttonrow.classList.add("shows__button-row");
 
   let newbutton = document.createElement("button");
   newbutton.classList.add("shows__button");

@@ -62,10 +62,11 @@
     }
 
     @include tablet {
-      width: 29%;
+      width: auto;
     }
 
     @include desktop {
+      width: auto;
     }
   }
 
@@ -86,13 +87,13 @@
     @include tablet {
       padding: 16px 16px 16px 16px;
       height: 2.8rem;
-      width: 7rem;
+      width: auto;
       text-align: center;
       font-size: 1.5rem;
     }
 
     @include desktop {
-      padding: 48px 36px 36px 36px;
+      margin: 36px 36px 36px 36px;
       height: 2.8rem;
       width: 7rem;
       text-align: center;
@@ -113,12 +114,14 @@
 
       @include tablet {
         height: 2.8rem;
+        width: auto;
         padding: 21px 16px 16px 16px;
         border-bottom: 5px solid $white;
       }
 
       @include desktop {
         height: 2.8rem;
+        width: auto;
         padding: 21px 16px 16px 16px;
         border-bottom: 5px solid $white;
       }
@@ -222,12 +225,14 @@
 
     @include phone {
       padding: 0px 16px 16px 16px;
+      text-align: left;
     }
 
     @include tablet {
       font-size: 14px;
       line-height: 18px;
       padding: 16px 16px 16px 36px;
+      text-align: left;
     }
 
     @include desktop {

@@ -82,7 +82,12 @@
 }
 @media only screen and (min-width: 768px) {
   .navbar__item {
-    width: 29%;
+    width: auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .navbar__item {
+    width: auto;
   }
 }
 .navbar__link, .navbar__link--current {
@@ -104,14 +109,14 @@
   .navbar__link, .navbar__link--current {
     padding: 16px 16px 16px 16px;
     height: 2.8rem;
-    width: 7rem;
+    width: auto;
     text-align: center;
     font-size: 1.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .navbar__link, .navbar__link--current {
-    padding: 48px 36px 36px 36px;
+    margin: 36px 36px 36px 36px;
     height: 2.8rem;
     width: 7rem;
     text-align: center;
@@ -132,6 +137,7 @@
 @media only screen and (min-width: 768px) {
   .navbar__link--current {
     height: 2.8rem;
+    width: auto;
     padding: 21px 16px 16px 16px;
     border-bottom: 5px solid #ffffff;
   }
@@ -139,6 +145,7 @@
 @media screen and (min-width: 1280px) {
   .navbar__link--current {
     height: 2.8rem;
+    width: auto;
     padding: 21px 16px 16px 16px;
     border-bottom: 5px solid #ffffff;
   }
@@ -235,6 +242,7 @@
 @media only screen and (max-width: 768px) {
   .footer__text, .footer__text--cc, .footer__text--bold {
     padding: 0px 16px 16px 16px;
+    text-align: left;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -242,6 +250,7 @@
     font-size: 14px;
     line-height: 18px;
     padding: 16px 16px 16px 36px;
+    text-align: left;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -314,7 +323,6 @@ input {
   margin-top: 16px;
   margin-bottom: 16px;
   width: 97%;
-  height: 40px;
   padding-left: 10px;
   padding-right: 0;
   border-color: #e1e1e1;
@@ -323,6 +331,21 @@ input {
   text-align: start;
   border-width: 1px;
   background-color: #fafafa;
+}
+@media only screen and (max-width: 768px) {
+  input {
+    height: 40px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  input {
+    height: 48px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  input {
+    height: 48px;
+  }
 }
 input:active {
   border-color: #323232;
@@ -678,6 +701,21 @@ textarea::placeholder {
   display: flex;
   flex-direction: row;
 }
+@media only screen and (min-width: 768px) {
+  .comment__form {
+    line-height: 20px;
+    width: 80%;
+    padding: 0 88px 0 72px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment__form {
+    line-height: 20px;
+    width: 60%;
+    justify-content: center;
+    padding: 0 240px 0 240px;
+  }
+}
 .comment__input {
   width: 100%;
   padding: 16px;
@@ -690,13 +728,30 @@ textarea::placeholder {
   -o-border-image: none;
      border-image: none;
   border-style: none;
+  height: 40px;
+  font-weight: bold;
 }
 @media only screen and (max-width: 768px) {
   .comment__button {
-    height: 40px;
     width: 100%;
     text-align: center;
     border-radius: 5px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .comment__button {
+    width: 150px;
+    text-align: center;
+    align-self: flex-end;
+    margin: 8px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment__button {
+    width: 150px;
+    text-align: center;
+    align-self: flex-end;
+    margin: 8px;
   }
 }
 .comment__button:hover {
@@ -712,6 +767,7 @@ textarea::placeholder {
 }
 @media only screen and (min-width: 768px) {
   .comment__image {
+    margin: 16px;
     border-radius: 50%;
     width: 48px;
     height: 48px;
@@ -719,6 +775,7 @@ textarea::placeholder {
 }
 @media screen and (min-width: 1280px) {
   .comment__image {
+    padding: 16px;
     border-radius: 50%;
     width: 48px;
     height: 48px;
@@ -737,23 +794,40 @@ textarea::placeholder {
 }
 @media only screen and (min-width: 768px) {
   .comment__image--grey {
+    margin: 16px;
     border-radius: 50%;
-    width: 36px;
-    height: 36px;
+    width: 48px;
+    height: 48px;
   }
 }
 @media screen and (min-width: 1280px) {
   .comment__image--grey {
+    margin: 16px;
     border-radius: 50%;
-    width: 36px;
-    height: 36px;
+    width: 48px;
+    height: 48px;
   }
 }
 .comment__section {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 150px;
+}
+@media only screen and (max-width: 768px) {
+  .comment__section {
+    height: auto;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .comment__section {
+    padding: 16px 80px 16px 80px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment__section {
+    width: 60%;
+    padding: 0 240px 0 240px;
+  }
 }
 .comment__post {
   display: flex;
@@ -768,22 +842,80 @@ textarea::placeholder {
   color: #afafaf;
 }
 .comment__body {
-  height: 70%;
-  width: 90%;
+  height: auto;
   word-wrap: break-word;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+@media only screen and (max-width: 768px) {
+  .comment__body {
+    height: auto;
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .comment__body {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment__body {
+    width: 100%;
+  }
+}
+.comment__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 @media only screen and (max-width: 768px) {
   .comment__info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     padding-top: 16px;
     height: 20%;
     width: 90%;
   }
 }
+@media only screen and (min-width: 768px) {
+  .comment__info {
+    padding-top: 16px;
+    height: 20%;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment__info {
+    padding-top: 16px;
+    height: 20%;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .comment__subheader {
+    line-height: 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment__subheader {
+    line-height: 20px;
+  }
+}
 .comment__divide, .comment__divide--solid, .comment__divide--thin {
-  margin: 0 16px 0 16px;
   stroke-width: 1px;
   color: #e1e1e1;
+}
+@media only screen and (max-width: 768px) {
+  .comment__divide, .comment__divide--solid, .comment__divide--thin {
+    margin: 0 16px 0 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .comment__divide, .comment__divide--solid, .comment__divide--thin {
+    margin: 0 80px 0 80px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment__divide, .comment__divide--solid, .comment__divide--thin {
+    width: 60%;
+    margin: 0 248px 0 248px;
+  }
 }/*# sourceMappingURL=bio.css.map */

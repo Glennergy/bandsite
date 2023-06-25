@@ -82,7 +82,12 @@
 }
 @media only screen and (min-width: 768px) {
   .navbar__item {
-    width: 29%;
+    width: auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .navbar__item {
+    width: auto;
   }
 }
 .navbar__link, .navbar__link--current {
@@ -104,14 +109,14 @@
   .navbar__link, .navbar__link--current {
     padding: 16px 16px 16px 16px;
     height: 2.8rem;
-    width: 7rem;
+    width: auto;
     text-align: center;
     font-size: 1.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .navbar__link, .navbar__link--current {
-    padding: 48px 36px 36px 36px;
+    margin: 36px 36px 36px 36px;
     height: 2.8rem;
     width: 7rem;
     text-align: center;
@@ -132,6 +137,7 @@
 @media only screen and (min-width: 768px) {
   .navbar__link--current {
     height: 2.8rem;
+    width: auto;
     padding: 21px 16px 16px 16px;
     border-bottom: 5px solid #ffffff;
   }
@@ -139,6 +145,7 @@
 @media screen and (min-width: 1280px) {
   .navbar__link--current {
     height: 2.8rem;
+    width: auto;
     padding: 21px 16px 16px 16px;
     border-bottom: 5px solid #ffffff;
   }
@@ -235,6 +242,7 @@
 @media only screen and (max-width: 768px) {
   .footer__text, .footer__text--cc, .footer__text--bold {
     padding: 0px 16px 16px 16px;
+    text-align: left;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -242,6 +250,7 @@
     font-size: 14px;
     line-height: 18px;
     padding: 16px 16px 16px 36px;
+    text-align: left;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -348,19 +357,38 @@ a {
 
 .hero {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-bio.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 @media only screen and (max-width: 768px) {
   .hero {
-    height: 15rem;
+    height: 25rem;
   }
 }
 @media only screen and (min-width: 768px) {
   .hero {
     height: 35rem;
+  }
+}
+.hero__subheader {
+  color: #ffffff;
+}
+@media only screen and (max-width: 768px) {
+  .hero__subheader {
+    margin: 32px 16px 32px 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hero__subheader {
+    margin: 32px 16px 32px 16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__subheader {
+    margin: 32px 16px 32px 16px;
   }
 }
 .hero__header {
@@ -389,7 +417,98 @@ a {
     padding: 0 88px;
   }
 }
+@media only screen and (max-width: 768px) {
+  .hero__player {
+    margin: 32px 16px 32px 16px;
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hero__player {
+    margin: 32px 16px 32px 16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__player {
+    margin: 32px 16px 32px 16px;
+  }
+}
 
+@media only screen and (max-width: 768px) {
+  .shows__subheader {
+    margin: 32px 16px 32px 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .shows__subheader {
+    margin: 32px 16px 32px 16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__subheader {
+    margin: 32px 16px 32px 16px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .shows__row {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+}
 .shows__row--selected {
   background-color: #e1e1e1;
+}
+@media only screen and (max-width: 768px) {
+  .shows__table-header {
+    color: #afafaf;
+    font-size: 14px;
+    font-weight: 600;
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .shows__date {
+    margin: 16px;
+    font-weight: 600;
+  }
+  .shows__date:before {
+    content: "DATE";
+    color: #afafaf;
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 16px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .shows__venue {
+    margin: 16px;
+  }
+  .shows__venue:before {
+    content: "VENUE";
+    color: #afafaf;
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 16px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .shows__location {
+    margin: 16px;
+  }
+  .shows__location:before {
+    content: "LOCATION";
+    color: #afafaf;
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 16px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .shows__button-row {
+    margin: 16px;
+  }
 }/*# sourceMappingURL=shows.css.map */

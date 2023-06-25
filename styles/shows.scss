@@ -81,14 +81,16 @@ a {
 // Hero Section
 .hero {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
+
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
     url("../assets/images/hero-bio.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
   @include phone {
-    height: 15rem;
+    height: 25rem;
   }
 
   @include tablet {
@@ -96,6 +98,21 @@ a {
   }
 
   @include desktop {
+  }
+
+  &__subheader {
+    color: $white;
+    @include phone {
+      margin: 32px 16px 32px 16px;
+    }
+
+    @include tablet {
+      margin: 32px 16px 32px 16px;
+    }
+
+    @include desktop {
+      margin: 32px 16px 32px 16px;
+    }
   }
 
   &__header {
@@ -120,13 +137,144 @@ a {
       padding: 0 88px;
     }
   }
+
+  &__player {
+    @include phone {
+      margin: 32px 16px 32px 16px;
+      width: 90%;
+    }
+
+    @include tablet {
+      margin: 32px 16px 32px 16px;
+    }
+
+    @include desktop {
+      margin: 32px 16px 32px 16px;
+    }
+  }
 }
 
 // Shows sections
 .shows {
+  &__subheader {
+    @include phone {
+      margin: 32px 16px 32px 16px;
+    }
+
+    @include tablet {
+      margin: 32px 16px 32px 16px;
+    }
+
+    @include desktop {
+      margin: 32px 16px 32px 16px;
+    }
+  }
+
   &__row {
+    @include phone {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
+
+    @include tablet {
+    }
+
+    @include desktop {
+    }
     &--selected {
       background-color: $mercury;
+    }
+  }
+
+  &__table-header {
+    @include phone {
+      color: $silver;
+      font-size: 14px;
+      font-weight: 600;
+      display: none;
+    }
+
+    @include tablet {
+    }
+
+    @include desktop {
+    }
+  }
+
+  &__date {
+    @include phone {
+      margin: 16px;
+      font-weight: 600;
+
+      &:before {
+        content: "DATE";
+        color: $silver;
+        font-size: 14px;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 16px;
+      }
+    }
+
+    @include tablet {
+    }
+
+    @include desktop {
+    }
+  }
+
+  &__venue {
+    @include phone {
+      margin: 16px;
+
+      &:before {
+        content: "VENUE";
+        color: $silver;
+        font-size: 14px;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 16px;
+      }
+    }
+
+    @include tablet {
+    }
+
+    @include desktop {
+    }
+  }
+
+  &__location {
+    @include phone {
+      margin: 16px;
+
+      &:before {
+        content: "LOCATION";
+        color: $silver;
+        font-size: 14px;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 16px;
+      }
+    }
+
+    @include tablet {
+    }
+
+    @include desktop {
+    }
+  }
+
+  &__button-row {
+    @include phone {
+      margin: 16px;
+    }
+
+    @include tablet {
+    }
+
+    @include desktop {
     }
   }
 }
