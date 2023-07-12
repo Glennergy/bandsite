@@ -36,8 +36,8 @@ function loadComments(comments) {
   newline.classList.add("comment__divide--solid");
 
   // Prepend new comment in comment section
-  commentcontainer.appendChild(commentsection);
-  commentcontainer.appendChild(newline);
+  commentcontainer.prepend(newline);
+  commentcontainer.prepend(commentsection);
   commentsection.prepend(newpostsitem);
   commentsection.prepend(commentimage);
   newpostsitem.appendChild(newpostsinfo);
@@ -46,64 +46,71 @@ function loadComments(comments) {
   newpostsitem.appendChild(newcomment);
 }
 
-const comment = document.getElementById("CommentForm");
+const commentform = document.getElementById("CommentForm");
 
 // Function creates new post
-comment.addEventListener("submit", function (e) {
+commentform.addEventListener("submit", function (e) {
   e.preventDefault();
   let commentcontainer = document.querySelector(".comment__container");
   let uname = e.target.name.value;
   let commentinput = e.target.comment.value;
-  const date = new Date();
-  let day = date.getDate();
-  let month = date.getMonth() + 1;
-  let year = date.getFullYear();
-  let fulldate = month + "/" + day + "/" + year;
   //   console.log(fulldate);
   //   console.log(commentinput);
 
   if (uname != "" && commentinput != "") {
-    // Creating post__item div
-    let commentsection = document.createElement("div");
-    commentsection.classList.add("comment__section");
+    // Post to API
+    axios
+      .post("https://project-1-api.herokuapp.com/comments?api_key=" + key, {
+        name: uname,
+        comment: commentinput,
+      })
 
-    let newuserimage = document.createElement("img");
-    newuserimage.classList.add("comment__image");
-    newuserimage.src = "../assets/images/Mohan-muruge.jpg";
+      .then((result) => {
+        console.log(result.data.name);
+        console.log(result.data.timestamp);
+        console.log(result.data.comment);
+        // Creating post__item div
+        let commentsection = document.createElement("div");
+        commentsection.classList.add("comment__section");
 
-    let newpostsitem = document.createElement("div");
-    newpostsitem.classList.add("comment__post");
+        let newuserimage = document.createElement("img");
+        newuserimage.classList.add("comment__image");
+        newuserimage.src = "../assets/images/Mohan-muruge.jpg";
 
-    let newpostsinfo = document.createElement("div");
-    newpostsinfo.classList.add("comment__info");
+        let newpostsitem = document.createElement("div");
+        newpostsitem.classList.add("comment__post");
 
-    let newpostsuname = document.createElement("p");
-    newpostsuname.classList.add("comment__user");
-    newpostsuname.innerHTML = uname;
+        let newpostsinfo = document.createElement("div");
+        newpostsinfo.classList.add("comment__info");
 
-    let newpostdate = document.createElement("p");
-    newpostdate.classList.add("comment__date");
-    newpostdate.innerHTML = fulldate;
+        let newpostsuname = document.createElement("p");
+        newpostsuname.classList.add("comment__user");
+        newpostsuname.innerHTML = result.data.name;
 
-    let newcomment = document.createElement("p");
-    newcomment.classList.add("comment__body");
-    newcomment.innerHTML = commentinput;
+        let newpostdate = document.createElement("p");
+        newpostdate.classList.add("comment__date");
+        newpostdate.innerHTML = result.data.timestamp;
 
-    let newline = document.createElement("hr");
-    newline.classList.add("comment__divide--solid");
+        let newcomment = document.createElement("p");
+        newcomment.classList.add("comment__body");
+        newcomment.innerHTML = result.data.comment;
 
-    // Prepend new comment in comment section
-    commentcontainer.prepend(newline);
-    commentcontainer.prepend(commentsection);
-    commentsection.appendChild(newpostsitem);
-    commentsection.prepend(newuserimage);
-    newpostsitem.appendChild(newpostsinfo);
-    newpostsinfo.appendChild(newpostsuname);
-    newpostsinfo.appendChild(newpostdate);
-    newpostsitem.appendChild(newcomment);
+        let newline = document.createElement("hr");
+        newline.classList.add("comment__divide--solid");
 
-    e.target.name.value = "";
-    e.target.comment.value = "";
+        // Prepend new comment in comment section
+        commentcontainer.prepend(newline);
+        commentcontainer.prepend(commentsection);
+        commentsection.appendChild(newpostsitem);
+        commentsection.prepend(newuserimage);
+        newpostsitem.appendChild(newpostsinfo);
+        newpostsinfo.appendChild(newpostsuname);
+        newpostsinfo.appendChild(newpostdate);
+        newpostsitem.appendChild(newcomment);
+
+        e.target.name.value = "";
+        e.target.comment.value = "";
+      });
   } else {
     console.log("Input value");
   }
