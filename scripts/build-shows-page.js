@@ -1,73 +1,55 @@
 // Array that stores Show information
-let showlist = [
-  {
-    date: "Mon Sept 06 2021",
-    venue: "Ronald Lane",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Tue Sept 21 2021",
-    venue: "Pier 3 East",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Oct 15 2021",
-    venue: "View Lounge",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Sat Nov 06 2021",
-    venue: "Hyatt Agency",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Nov 26 2021",
-    venue: "Moscow Center",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Wed Dec 15 2021",
-    venue: "Press Club",
-    location: "San Francisco, CA",
-  },
-];
+
+const key = "b994eb8f-d0fe-4daf-a14b-5f837da0315e";
+
+const showlist = axios.get(
+  "https://project-1-api.herokuapp.com/showdates?api_key=" + key
+);
 
 // variable that holds Show Table and number of rows-1 (for Index)
 const showtable = document.querySelector(".shows__table");
 let count = 0;
 
 // Function for populating Shows Table
-showlist.forEach((showinfo) => {
-  let showdate = showinfo.date;
-  let showvenue = showinfo.venue;
-  let showlocation = showinfo.location;
 
-  let newrow = document.createElement("tr");
-  newrow.classList.add("shows__row");
-  let newdate = document.createElement("td");
-  newdate.innerHTML = showdate;
-  newdate.classList.add("shows__date");
-  let newvenue = document.createElement("td");
-  newvenue.innerHTML = showvenue;
-  newvenue.classList.add("shows__venue");
-  let newlocation = document.createElement("td");
-  newlocation.innerHTML = showlocation;
-  newlocation.classList.add("shows__location");
-  let newbuttonrow = document.createElement("td");
-  newbuttonrow.classList.add("shows__button-row");
+showlist
+  .then((result) => {
+    result.data.forEach((showinfo) => {
+      let showdate = showinfo.date;
+      let showvenue = showinfo.place;
+      let showlocation = showinfo.location;
 
-  let newbutton = document.createElement("button");
-  newbutton.classList.add("shows__button");
-  newbutton.innerHTML = "Buy Tickets";
-  newbutton.addEventListener("click", buttonclick);
+      let newrow = document.createElement("tr");
+      newrow.classList.add("shows__row");
+      let newdate = document.createElement("td");
+      newdate.innerHTML = showdate;
+      newdate.classList.add("shows__date");
+      let newvenue = document.createElement("td");
+      newvenue.innerHTML = showvenue;
+      newvenue.classList.add("shows__venue");
+      let newlocation = document.createElement("td");
+      newlocation.innerHTML = showlocation;
+      newlocation.classList.add("shows__location");
+      let newbuttonrow = document.createElement("td");
+      newbuttonrow.classList.add("shows__button-row");
 
-  showtable.appendChild(newrow);
-  newrow.appendChild(newdate);
-  newrow.appendChild(newvenue);
-  newrow.appendChild(newlocation);
-  newrow.appendChild(newbuttonrow);
-  newbuttonrow.appendChild(newbutton);
-});
+      let newbutton = document.createElement("button");
+      newbutton.classList.add("shows__button");
+      newbutton.innerHTML = "Buy Tickets";
+      newbutton.addEventListener("click", buttonclick);
+
+      showtable.appendChild(newrow);
+      newrow.appendChild(newdate);
+      newrow.appendChild(newvenue);
+      newrow.appendChild(newlocation);
+      newrow.appendChild(newbuttonrow);
+      newbuttonrow.appendChild(newbutton);
+    });
+  })
+
+  .catch((error) => {
+    console.log(error);
+  });
 
 // Function for changing row if buy tickets button is clicked
 
