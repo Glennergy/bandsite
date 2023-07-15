@@ -15,7 +15,7 @@ let count = 0;
 showlist
   .then((result) => {
     result.data.forEach((showinfo) => {
-      let showdate = showinfo.date;
+      let showdate = JSON.parse(showinfo.date);
       let showvenue = showinfo.place;
       let showlocation = showinfo.location;
 

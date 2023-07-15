@@ -26,7 +26,7 @@ function loadComments(comments) {
 
   let newpostdate = document.createElement("p");
   newpostdate.classList.add("comment__date");
-  newpostdate.innerHTML = comments.timestamp;
+  newpostdate.innerHTML = JSON.parse(comments.timestamp);
 
   let newcomment = document.createElement("p");
   newcomment.classList.add("comment__body");
@@ -66,48 +66,7 @@ commentform.addEventListener("submit", function (e) {
       })
 
       .then((result) => {
-        console.log(result.data.name);
-        console.log(result.data.timestamp);
-        console.log(result.data.comment);
-        // Creating post__item div
-        let commentsection = document.createElement("div");
-        commentsection.classList.add("comment__section");
-
-        let newuserimage = document.createElement("img");
-        newuserimage.classList.add("comment__image");
-        newuserimage.src = "../assets/images/Mohan-muruge.jpg";
-
-        let newpostsitem = document.createElement("div");
-        newpostsitem.classList.add("comment__post");
-
-        let newpostsinfo = document.createElement("div");
-        newpostsinfo.classList.add("comment__info");
-
-        let newpostsuname = document.createElement("p");
-        newpostsuname.classList.add("comment__user");
-        newpostsuname.innerHTML = result.data.name;
-
-        let newpostdate = document.createElement("p");
-        newpostdate.classList.add("comment__date");
-        newpostdate.innerHTML = result.data.timestamp;
-
-        let newcomment = document.createElement("p");
-        newcomment.classList.add("comment__body");
-        newcomment.innerHTML = result.data.comment;
-
-        let newline = document.createElement("hr");
-        newline.classList.add("comment__divide--solid");
-
-        // Prepend new comment in comment section
-        commentcontainer.prepend(newline);
-        commentcontainer.prepend(commentsection);
-        commentsection.appendChild(newpostsitem);
-        commentsection.prepend(newuserimage);
-        newpostsitem.appendChild(newpostsinfo);
-        newpostsinfo.appendChild(newpostsuname);
-        newpostsinfo.appendChild(newpostdate);
-        newpostsitem.appendChild(newcomment);
-
+        loadComments(result.data);
         e.target.name.value = "";
         e.target.comment.value = "";
       });
