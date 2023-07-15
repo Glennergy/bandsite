@@ -233,7 +233,7 @@ textarea {
   &__image {
     width: 95%;
     @include phone {
-      padding: 0px 16px 16px 16px;
+      padding: 0px 0px 16px 0px;
     }
 
     @include tablet {

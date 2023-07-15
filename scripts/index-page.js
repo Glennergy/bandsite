@@ -51,7 +51,6 @@ const commentform = document.getElementById("CommentForm");
 // Function creates new post
 commentform.addEventListener("submit", function (e) {
   e.preventDefault();
-  let commentcontainer = document.querySelector(".comment__container");
   let uname = e.target.name.value;
   let commentinput = e.target.comment.value;
   //   console.log(fulldate);
