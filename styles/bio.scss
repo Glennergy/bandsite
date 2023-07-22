@@ -271,7 +271,7 @@ textarea {
       line-height: 32px;
       display: inline-block;
       text-align: left;
-      padding: 16px 80px 36px 80px;
+      padding: 16px 64px 36px 80px;
     }
 
     @include desktop {
@@ -408,7 +408,7 @@ textarea {
     @include tablet {
       line-height: 20px;
       width: 80%;
-      padding: 0 88px 0 72px;
+      padding: 0 64px 0 72px;
     }
 
     @include desktop {

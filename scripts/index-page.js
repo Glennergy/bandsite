@@ -26,7 +26,7 @@ function loadComments(comments) {
 
   let newpostdate = document.createElement("p");
   newpostdate.classList.add("comment__date");
-  newpostdate.innerHTML = JSON.parse(comments.timestamp);
+  newpostdate.innerHTML = new Date(comments.timestamp).toDateString();
 
   let newcomment = document.createElement("p");
   newcomment.classList.add("comment__body");

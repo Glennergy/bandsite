@@ -563,7 +563,7 @@ textarea::placeholder {
     line-height: 32px;
     display: inline-block;
     text-align: left;
-    padding: 16px 80px 36px 80px;
+    padding: 16px 64px 36px 80px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -707,7 +707,7 @@ textarea::placeholder {
   .comment__form {
     line-height: 20px;
     width: 80%;
-    padding: 0 88px 0 72px;
+    padding: 0 64px 0 72px;
   }
 }
 @media screen and (min-width: 1280px) {
