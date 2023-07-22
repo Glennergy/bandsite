@@ -5,63 +5,68 @@ const comments = axios.get(
 );
 
 function loadComments(comments) {
-  let commentcontainer = document.querySelector(".comment__container");
+  let commentContainer = document.querySelector(".comment__container");
 
   // Creating post__item div
-  let commentsection = document.createElement("div");
-  commentsection.classList.add("comment__section");
+  let commentSection = document.createElement("div");
+  commentSection.classList.add("comment__section");
 
-  let commentimage = document.createElement("div");
-  commentimage.classList.add("comment__image--grey");
+  let commentImage = document.createElement("div");
+  commentImage.classList.add("comment__image--grey");
 
-  let newpostsitem = document.createElement("div");
-  newpostsitem.classList.add("comment__post");
+  let newPostsItem = document.createElement("div");
+  newPostsItem.classList.add("comment__post");
 
-  let newpostsinfo = document.createElement("div");
-  newpostsinfo.classList.add("comment__info");
+  let newPostsInfo = document.createElement("div");
+  newPostsInfo.classList.add("comment__info");
 
-  let newpostsuname = document.createElement("p");
-  newpostsuname.classList.add("comment__user");
-  newpostsuname.innerHTML = comments.name;
+  let newPostsUname = document.createElement("p");
+  newPostsUname.classList.add("comment__user");
+  newPostsUname.innerHTML = comments.name;
 
-  let newpostdate = document.createElement("p");
-  newpostdate.classList.add("comment__date");
-  newpostdate.innerHTML = new Date(comments.timestamp).toDateString();
+  let newPostDate = document.createElement("p");
+  newPostDate.classList.add("comment__date");
+  newPostDate.innerHTML = new Date(comments.timestamp).toDateString();
 
-  let newcomment = document.createElement("p");
-  newcomment.classList.add("comment__body");
-  newcomment.innerHTML = comments.comment;
+  let newComment = document.createElement("p");
+  newComment.classList.add("comment__body");
+  newComment.innerHTML = comments.comment;
 
-  let newline = document.createElement("hr");
-  newline.classList.add("comment__divide--solid");
+  let newLine = document.createElement("hr");
+  newLine.classList.add("comment__divide--solid");
+
+  let newLike = document.createElement("button");
+  newLike.classList.add("comment__like");
+  newLike.innerHTML = comments.likes + " Likes";
+  newLike.setAttribute("id", comments.id);
+  newLike.addEventListener("click", likeComment);
 
   // Prepend new comment in comment section
-  commentcontainer.prepend(newline);
-  commentcontainer.prepend(commentsection);
-  commentsection.prepend(newpostsitem);
-  commentsection.prepend(commentimage);
-  newpostsitem.appendChild(newpostsinfo);
-  newpostsinfo.appendChild(newpostsuname);
-  newpostsinfo.appendChild(newpostdate);
-  newpostsitem.appendChild(newcomment);
+  commentContainer.prepend(newLine);
+  commentContainer.prepend(commentSection);
+  commentSection.prepend(newPostsItem);
+  commentSection.prepend(commentImage);
+  newPostsItem.appendChild(newPostsInfo);
+  newPostsInfo.appendChild(newPostsUname);
+  newPostsInfo.appendChild(newPostDate);
+  newPostsItem.appendChild(newComment);
+  newPostsItem.appendChild(newLike);
 }
 
-const commentform = document.getElementById("CommentForm");
+const commentForm = document.getElementById("CommentForm");
 
 // Function creates new post
-commentform.addEventListener("submit", function (e) {
+commentForm.addEventListener("submit", function (e) {
   e.preventDefault();
-  let uname = e.target.name.value;
-  let commentinput = e.target.comment.value;
-  //   console.log(fulldate);
-  //   console.log(commentinput);
+  let uName = e.target.name.value;
+  let commentInput = e.target.comment.value;
 
-  if (uname != "" && commentinput != "") {
+  if (uName != "" && commentInput != "") {
     // Post to API
     axios
       .post("https://project-1-api.herokuapp.com/comments?api_key=" + key, {
-        name: uname,
-        comment: commentinput,
+        name: uName,
+        comment: commentInput,
       })
 
       .then((result) => {
@@ -73,6 +78,22 @@ commentform.addEventListener("submit", function (e) {
     console.log("Input value");
   }
 });
+
+// Function adds like to comment
+function likeComment() {
+  axios
+    .put(
+      "https://project-1-api.herokuapp.com/comments/" +
+        this.id +
+        "/like?api_key=" +
+        key
+    )
+
+    // updates information in like button
+    .then((result) => {
+      this.innerHTML = result.data.likes + " Likes";
+    });
+}
 
 // calls loadComments function for every entry in comments
 comments

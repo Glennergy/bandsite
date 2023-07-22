@@ -505,6 +505,40 @@ textarea {
       }
     }
   }
+  &__like {
+    background-color: $bandsite-black;
+    color: $white;
+    border-image: none;
+    border-style: none;
+    height: 40px;
+    font-weight: bold;
+
+    @include phone {
+      width: 98%;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    @include tablet {
+      width: 150px;
+      text-align: center;
+      align-self: flex-end;
+      margin: 8px;
+      border-radius: 5px;
+    }
+
+    @include desktop {
+      width: 150px;
+      text-align: center;
+      align-self: flex-end;
+      margin: 8px;
+      border-radius: 5px;
+    }
+
+    &:hover {
+      background-color: $bandsite-darkblack;
+    }
+  }
 
   &__section {
     display: flex;

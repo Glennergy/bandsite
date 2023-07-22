@@ -810,6 +810,43 @@ textarea::placeholder {
     height: 48px;
   }
 }
+.comment__like {
+  background-color: #323232;
+  color: #ffffff;
+  -o-border-image: none;
+     border-image: none;
+  border-style: none;
+  height: 40px;
+  font-weight: bold;
+}
+@media only screen and (max-width: 768px) {
+  .comment__like {
+    width: 98%;
+    text-align: center;
+    border-radius: 5px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .comment__like {
+    width: 150px;
+    text-align: center;
+    align-self: flex-end;
+    margin: 8px;
+    border-radius: 5px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment__like {
+    width: 150px;
+    text-align: center;
+    align-self: flex-end;
+    margin: 8px;
+    border-radius: 5px;
+  }
+}
+.comment__like:hover {
+  background-color: #000000;
+}
 .comment__section {
   display: flex;
   flex-direction: row;
