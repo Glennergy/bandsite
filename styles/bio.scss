@@ -24,50 +24,50 @@ a {
 label {
   color: $silver;
   @include phone {
-    padding-top: 16px;
+    padding-top: 1rem;
     font-weight: bold;
-    font-size: 10px;
-    line-height: 20px;
+    font-size: 0.625rem;
+    line-height: 1.25rem;
   }
   @include tablet {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
   }
 
   @include desktop {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
   }
 }
 
 input {
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   width: 97%;
 
-  padding-left: 10px;
+  padding-left: 0.625rem;
   padding-right: 0;
   border-color: $mercury;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   border-style: solid;
   text-align: start;
-  border-width: 1px;
+  border-width: 0.063rem;
   background-color: $alabaster;
 
   @include phone {
-    height: 40px;
+    height: 2.5rem;
   }
   @include tablet {
-    height: 48px;
+    height: 3rem;
   }
 
   @include desktop {
-    height: 48px;
+    height: 3rem;
   }
 
   &:active {
     border-color: $bandsite-black;
-    border-width: 1px;
+    border-width: 0.063rem;
   }
 
   &::placeholder {
@@ -76,14 +76,14 @@ input {
 }
 
 textarea {
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   width: 97%;
   height: 10rem;
-  padding-left: 10px;
-  padding-top: 10px;
+  padding-left: 0.625rem;
+  padding-top: 0.625rem;
   border-color: $mercury;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   border-style: solid;
   background-color: $alabaster;
   &::placeholder {
@@ -97,21 +97,21 @@ textarea {
   @include phone {
     font-size: 1.5rem;
     font-weight: 700;
-    padding: 24px 16px 16px 16px;
+    padding: 1.5rem 1rem 1rem 1rem;
   }
 
   @include tablet {
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: 700;
-    line-height: 44px;
-    padding: 48px 36px 36px 36px;
+    line-height: 2.75rem;
+    padding: 3rem 2.25rem 2.25rem 2.25rem;
   }
 
   @include desktop {
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: 700;
-    line-height: 44px;
-    padding: 48px 36px 36px 88px;
+    line-height: 2.75rem;
+    padding: 3rem 2.25rem 2.25rem 5.5rem;
   }
 }
 
@@ -130,15 +130,15 @@ textarea {
 
   &--header {
     @include phone {
-      padding: 24px 16px 16px 16px;
+      padding: 1.5rem 1rem 1rem 1rem;
     }
 
     @include tablet {
-      padding: 48px 36px 36px 36px;
+      padding: 3rem 2.25rem 2.25rem 2.25rem;
     }
 
     @include desktop {
-      padding: 48px 36px 36px 88px;
+      padding: 3rem 2.25rem 2.25rem 5.5rem;
     }
   }
 
@@ -148,26 +148,26 @@ textarea {
     @include phone {
       width: 10rem;
       height: 3rem;
-      padding: 24px 16px 0px 16px;
+      padding: 1.5rem 1rem 0px 1rem;
     }
 
     @include tablet {
       position: relative;
       width: 8rem;
       height: 2rem;
-      top: -324px;
+      top: -20.25rem;
       left: 70%;
-      padding: 48px 36px 36px 36px;
+      padding: 3rem 2.25rem 2.25rem 2.25rem;
     }
 
     @include desktop {
-      padding: 48px 36px 36px 36px;
+      padding: 3rem 2.25rem 2.25rem 2.25rem;
       position: relative;
       width: 8rem;
       height: 2rem;
-      top: -420px;
+      top: -26.25rem;
       left: 70%;
-      padding: 48px 36px 36px 36px;
+      padding: 3rem 2.25rem 2.25rem 2.25rem;
     }
   }
 }
@@ -195,23 +195,23 @@ textarea {
   &__header {
     color: $white;
     @include phone {
-      font-size: 24px;
-      line-height: 32px;
+      font-size: 1.5rem;
+      line-height: 2rem;
       font-weight: 700;
-      padding: 0 16px 0 16px;
+      padding: 0 1rem 0 1rem;
     }
 
     @include tablet {
-      font-size: 60px;
-      line-height: 68px;
+      font-size: 3.75rem;
+      line-height: 4.25rem;
       font-weight: 700;
-      padding: 0 36px 0 36px;
+      padding: 0 2.25rem 0 2.25rem;
     }
 
     @include desktop {
-      font-size: 60px;
-      line-height: 68px;
-      padding: 0 88px;
+      font-size: 3.75rem;
+      line-height: 4.25rem;
+      padding: 0 5.5rem;
     }
   }
 }
@@ -223,7 +223,7 @@ textarea {
   }
 
   &__formdivide {
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
     width: 100%;
   }
 
@@ -233,21 +233,21 @@ textarea {
   &__image {
     width: 95%;
     @include phone {
-      padding: 0px 0px 16px 0px;
+      padding: 0px 0px 1rem 0px;
     }
 
     @include tablet {
       width: 80%;
-      height: 500px;
+      height: 31.25rem;
       display: inline;
       margin: 0;
-      padding: 36px 36px 36px 36px;
+      padding: 2.25rem 2.25rem 2.25rem 2.25rem;
     }
 
     @include desktop {
       width: 80%;
       height: 40%;
-      padding: 0px 36px 36px 36px;
+      padding: 0px 2.25rem 2.25rem 2.25rem;
     }
   }
 
@@ -262,20 +262,20 @@ textarea {
   &__quote {
     color: $bandsite-black;
     @include phone {
-      padding: 24px 16px 16px 16px;
+      padding: 1.5rem 1rem 1rem 1rem;
     }
 
     @include tablet {
       width: 80%;
-      font-size: 24px;
-      line-height: 32px;
+      font-size: 1.5rem;
+      line-height: 2rem;
       display: inline-block;
       text-align: left;
-      padding: 16px 64px 36px 80px;
+      padding: 1rem 4rem 2.25rem 5rem;
     }
 
     @include desktop {
-      padding: 48px 36px 36px 36px;
+      padding: 3rem 2.25rem 2.25rem 2.25rem;
     }
   }
 
@@ -287,22 +287,22 @@ textarea {
   &__header {
     color: $bandsite-darkblack;
     @include phone {
-      font-size: 14px;
+      font-size: 0.875rem;
       font-weight: 600;
-      line-height: 22px;
-      padding: 24px 16px 16px 16px;
+      line-height: 1.375rem;
+      padding: 1.5rem 1rem 1rem 1rem;
     }
 
     @include tablet {
-      font-size: 24px;
+      font-size: 1.5rem;
       font-weight: 600;
-      line-height: 32px;
-      padding: 48px 36px 16px 106px;
+      line-height: 2rem;
+      padding: 3rem 2.25rem 1rem 6.625rem;
       display: inline;
     }
 
     @include desktop {
-      padding: 48px 36px 36px 168px;
+      padding: 3rem 2.25rem 2.25rem 10.5rem;
     }
   }
 
@@ -320,33 +320,33 @@ textarea {
       display: flex;
       flex-direction: row;
       justify-content: left;
-      padding: 0px 16px 36px 132px;
+      padding: 0px 1rem 2.25rem 8.25rem;
     }
   }
 
   &__text {
     color: $bandsite-black;
     @include phone {
-      font-size: 13px;
+      font-size: 0.813rem;
       font-weight: 400;
-      line-height: 18px;
-      padding: 0px 16px 16px 16px;
+      line-height: 1.125rem;
+      padding: 0px 1rem 1rem 1rem;
     }
 
     @include tablet {
-      font-size: 18px;
+      font-size: 1.125rem;
       font-weight: 400;
-      line-height: 22px;
+      line-height: 1.375rem;
       width: 30%;
-      padding: 48px 36px 36px 36px;
+      padding: 3rem 2.25rem 2.25rem 2.25rem;
     }
 
     @include desktop {
-      font-size: 18px;
+      font-size: 1.125rem;
       font-weight: 400;
-      line-height: 22px;
+      line-height: 1.375rem;
       width: 40%;
-      padding: 0px 36px 36px 36px;
+      padding: 0px 2.25rem 2.25rem 2.25rem;
     }
   }
 }
@@ -360,7 +360,7 @@ textarea {
     @include phone {
       display: flex;
       flex-direction: column;
-      padding: 0px 16px 0px 16px;
+      padding: 0px 1rem 0px 1rem;
     }
 
     @include tablet {
@@ -368,28 +368,28 @@ textarea {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-evenly;
-      padding: 0px 36px 36px 36px;
+      padding: 0px 2.25rem 2.25rem 2.25rem;
     }
 
     @include desktop {
-      padding: 0px 36px 36px 36px;
+      padding: 0px 2.25rem 2.25rem 2.25rem;
     }
   }
   &__image {
     filter: grayscale(1);
     width: 100%;
     @include phone {
-      padding: 0 0 16px 0;
+      padding: 0 0 1rem 0;
     }
 
     @include tablet {
       display: inline;
       width: 27%;
-      padding: 16px 16px 16px 16px;
+      padding: 1rem 1rem 1rem 1rem;
     }
 
     @include desktop {
-      padding: 48px 36px 36px 36px;
+      padding: 3rem 2.25rem 2.25rem 2.25rem;
     }
 
     &:hover {
@@ -406,22 +406,22 @@ textarea {
     @include phone {
     }
     @include tablet {
-      line-height: 20px;
+      line-height: 1.25rem;
       width: 80%;
-      padding: 0 64px 0 72px;
+      padding: 0 4rem 0 4.5rem;
     }
 
     @include desktop {
-      line-height: 20px;
+      line-height: 1.25rem;
       width: 60%;
       justify-content: center;
-      padding: 0 240px 0 240px;
+      padding: 0 15rem 0 15rem;
     }
   }
 
   &__input {
     width: 100%;
-    padding: 16px;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
   }
@@ -431,27 +431,27 @@ textarea {
     color: $white;
     border-image: none;
     border-style: none;
-    height: 40px;
+    height: 2.5rem;
     font-weight: bold;
 
     @include phone {
       width: 100%;
       text-align: center;
-      border-radius: 5px;
+      border-radius: 0.313rem;
     }
 
     @include tablet {
-      width: 150px;
+      width: 9.375rem;
       text-align: center;
       align-self: flex-end;
-      margin: 8px;
+      margin: 0.5rem;
     }
 
     @include desktop {
-      width: 150px;
+      width: 9.375rem;
       text-align: center;
       align-self: flex-end;
-      margin: 8px;
+      margin: 0.5rem;
     }
 
     &:hover {
@@ -461,47 +461,47 @@ textarea {
 
   &__image {
     @include phone {
-      padding: 16px;
+      padding: 1rem;
       border-radius: 50%;
-      width: 36px;
-      height: 36px;
+      width: 2.25rem;
+      height: 2.25rem;
     }
 
     @include tablet {
-      margin: 16px;
+      margin: 1rem;
       border-radius: 50%;
-      width: 48px;
-      height: 48px;
+      width: 3rem;
+      height: 3rem;
     }
 
     @include desktop {
-      padding: 16px;
+      padding: 1rem;
       border-radius: 50%;
-      width: 48px;
-      height: 48px;
+      width: 3rem;
+      height: 3rem;
     }
 
     &--grey {
       background-color: $silver;
       @include phone {
-        margin: 16px;
+        margin: 1rem;
         border-radius: 50%;
-        width: 36px;
-        height: 36px;
+        width: 2.25rem;
+        height: 2.25rem;
       }
 
       @include tablet {
-        margin: 16px;
+        margin: 1rem;
         border-radius: 50%;
-        width: 48px;
-        height: 48px;
+        width: 3rem;
+        height: 3rem;
       }
 
       @include desktop {
-        margin: 16px;
+        margin: 1rem;
         border-radius: 50%;
-        width: 48px;
-        height: 48px;
+        width: 3rem;
+        height: 3rem;
       }
     }
   }
@@ -510,29 +510,29 @@ textarea {
     color: $white;
     border-image: none;
     border-style: none;
-    height: 40px;
+    height: 2.5rem;
     font-weight: bold;
 
     @include phone {
       width: 98%;
       text-align: center;
-      border-radius: 5px;
+      border-radius: 0.313rem;
     }
 
     @include tablet {
-      width: 150px;
+      width: 9.375rem;
       text-align: center;
       align-self: flex-end;
-      margin: 8px;
-      border-radius: 5px;
+      margin: 0.5rem;
+      border-radius: 0.313rem;
     }
 
     @include desktop {
-      width: 150px;
+      width: 9.375rem;
       text-align: center;
       align-self: flex-end;
-      margin: 8px;
-      border-radius: 5px;
+      margin: 0.5rem;
+      border-radius: 0.313rem;
     }
 
     &:hover {
@@ -549,11 +549,11 @@ textarea {
       height: auto;
     }
     @include tablet {
-      padding: 16px 80px 16px 80px;
+      padding: 1rem 5rem 1rem 5rem;
     }
     @include desktop {
       width: 60%;
-      padding: 0 240px 0 240px;
+      padding: 0 15rem 0 15rem;
     }
   }
 
@@ -575,8 +575,8 @@ textarea {
   &__body {
     height: auto;
     word-wrap: break-word;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     @include phone {
       height: auto;
       width: 90%;
@@ -594,18 +594,18 @@ textarea {
     flex-direction: row;
     justify-content: space-between;
     @include phone {
-      padding-top: 16px;
+      padding-top: 1rem;
       height: 20%;
       width: 90%;
     }
 
     @include tablet {
-      padding-top: 16px;
+      padding-top: 1rem;
       height: 20%;
       width: 100%;
     }
     @include desktop {
-      padding-top: 16px;
+      padding-top: 1rem;
       height: 20%;
       width: 100%;
     }
@@ -616,27 +616,27 @@ textarea {
     @include phone {
     }
     @include tablet {
-      line-height: 20px;
+      line-height: 1.25rem;
     }
 
     @include desktop {
-      line-height: 20px;
+      line-height: 1.25rem;
     }
   }
 
   &__divide {
-    stroke-width: 1px;
+    stroke-width: 0.063rem;
     color: $mercury;
 
     @include phone {
-      margin: 0 16px 0 16px;
+      margin: 0 1rem 0 1rem;
     }
     @include tablet {
-      margin: 0 80px 0 80px;
+      margin: 0 5rem 0 5rem;
     }
     @include desktop {
       width: 60%;
-      margin: 0 248px 0 248px;
+      margin: 0 15.5rem 0 15.5rem;
     }
 
     &--thin {

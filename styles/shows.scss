@@ -36,15 +36,15 @@ a {
 
   &--header {
     @include phone {
-      padding: 24px 16px 16px 16px;
+      padding: 1.5rem 1rem 1rem 1rem;
     }
 
     @include tablet {
-      padding: 48px 36px 36px 36px;
+      padding: 3rem 2.25rem 2.25rem 2.25rem;
     }
 
     @include desktop {
-      padding: 48px 36px 36px 88px;
+      padding: 3rem 2.25rem 2.25rem 5.5rem;
     }
   }
 
@@ -54,26 +54,26 @@ a {
     @include phone {
       width: 10rem;
       height: 3rem;
-      padding: 24px 16px 0px 16px;
+      padding: 1.5rem 1rem 0px 1rem;
     }
 
     @include tablet {
       position: relative;
       width: 8rem;
       height: 2rem;
-      top: -324px;
+      top: -20.25rem;
       left: 70%;
-      padding: 48px 36px 36px 36px;
+      padding: 3rem 2.25rem 2.25rem 2.25rem;
     }
 
     @include desktop {
-      padding: 48px 36px 36px 36px;
+      padding: 3rem 2.25rem 2.25rem 2.25rem;
       position: relative;
       width: 8rem;
       height: 2rem;
-      top: -420px;
+      top: --26.25rem;
       left: 70%;
-      padding: 48px 36px 36px 36px;
+      padding: 3rem 2.25rem 2.25rem 2.25rem;
     }
   }
 }
@@ -111,58 +111,58 @@ a {
   &__subheader {
     color: $white;
     @include phone {
-      font-size: 18px;
-      margin: 32px 16px 32px 16px;
+      font-size: 1.125rem;
+      margin: 2rem 1rem 2rem 1rem;
     }
 
     @include tablet {
-      font-size: 18px;
-      margin: 32px 16px 32px 16px;
+      font-size: 1.125rem;
+      margin: 2rem 1rem 2rem 1rem;
     }
 
     @include desktop {
-      font-size: 18px;
-      margin: 32px 16px 32px 16px;
+      font-size: 1.125rem;
+      margin: 2rem 1rem 2rem 1rem;
     }
   }
 
   &__header {
     color: $white;
     @include phone {
-      font-size: 24px;
-      line-height: 32px;
+      font-size: 1.5rem;
+      line-height: 2rem;
       font-weight: 700;
-      padding: 0 16px 0 16px;
+      padding: 0 1rem 0 1rem;
     }
 
     @include tablet {
-      font-size: 60px;
-      line-height: 68px;
+      font-size: 3.75rem;
+      line-height: 4.25rem;
       font-weight: 700;
-      padding: 0 16px 0 16px;
+      padding: 0 1rem 0 1rem;
     }
 
     @include desktop {
-      font-size: 60px;
-      line-height: 68px;
-      padding: 0 16px;
+      font-size: 3.75rem;
+      line-height: 4.25rem;
+      padding: 0 1rem;
     }
   }
 
   &__player {
     @include phone {
-      margin: 32px 16px 32px 16px;
+      margin: 2rem 1rem 2rem 1rem;
       width: 90%;
     }
 
     @include tablet {
-      margin: 32px 16px 32px 16px;
+      margin: 2rem 1rem 2rem 1rem;
       width: 60%;
     }
 
     @include desktop {
       width: 25%;
-      margin: 32px 16px 32px 16px;
+      margin: 2rem 1rem 2rem 1rem;
     }
   }
 }
@@ -182,15 +182,15 @@ a {
 
   &__subheader {
     @include phone {
-      margin: 32px 16px 32px 16px;
+      margin: 2rem 1rem 2rem 1rem;
     }
 
     @include tablet {
-      margin: 32px 16px 32px 16px;
+      margin: 2rem 1rem 2rem 1rem;
     }
 
     @include desktop {
-      margin: 0px 16px 32px 16px;
+      margin: 0px 1rem 2rem 1rem;
     }
   }
 
@@ -204,7 +204,7 @@ a {
     @include desktop {
       height: 20rem;
       display: flex;
-      padding: 32px 16px 16px 16px;
+      padding: 2rem 1rem 1rem 1rem;
       justify-content: space-around;
     }
   }
@@ -218,7 +218,7 @@ a {
     @include tablet {
       border-collapse: collapse;
       width: 100%;
-      padding: 0 16px 0 16px;
+      padding: 0 1rem 0 1rem;
     }
 
     @include desktop {
@@ -232,24 +232,24 @@ a {
       display: flex;
       flex-direction: column;
       height: auto;
-      border-bottom: 1px solid $mercury;
+      border-bottom: 0.063rem solid $mercury;
     }
 
     @include tablet {
       height: auto;
-      padding: 16px 0 16px 0;
+      padding: 1rem 0 1rem 0;
       border-collapse: collapse;
     }
 
     @include desktop {
       border-collapse: collapse;
 
-      border-bottom: 1px solid black;
+      border-bottom: 0.063rem solid black;
     }
     &--selected {
       border-collapse: collapse;
       background-color: $mercury;
-      border-bottom: 1px solid black;
+      border-bottom: 0.063rem solid black;
     }
   }
 
@@ -262,7 +262,7 @@ a {
     @include tablet {
       text-align: left;
       font-weight: 600;
-      font-size: 14px;
+      font-size: 0.875rem;
       font-weight: 600;
     }
 
@@ -272,105 +272,105 @@ a {
 
   &__date {
     @include phone {
-      margin: 16px;
+      margin: 1rem;
       font-weight: 600;
 
       &:before {
         content: "DATE";
         color: $silver;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-weight: 600;
         display: block;
-        margin-bottom: 16px;
+        margin-bottom: 1rem;
       }
     }
 
     @include tablet {
-      font-size: 14px;
-      margin: 16px;
+      font-size: 0.875rem;
+      margin: 1rem;
       font-weight: 600;
-      border-bottom: 1px solid $mercury;
+      border-bottom: 0.063rem solid $mercury;
     }
 
     @include desktop {
-      font-size: 14px;
-      margin: 16px;
+      font-size: 0.875rem;
+      margin: 1rem;
       font-weight: 600;
     }
   }
 
   &__venue {
     @include phone {
-      margin: 16px;
+      margin: 1rem;
 
       &:before {
         content: "VENUE";
         color: $silver;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-weight: 600;
         display: block;
-        margin-bottom: 16px;
+        margin-bottom: 1rem;
       }
     }
 
     @include tablet {
-      font-size: 14px;
-      margin: 16px;
-      border-bottom: 1px solid $mercury;
+      font-size: 0.875rem;
+      margin: 1rem;
+      border-bottom: 0.063rem solid $mercury;
     }
 
     @include desktop {
-      font-size: 14px;
-      margin: 16px;
+      font-size: 0.875rem;
+      margin: 1rem;
     }
   }
 
   &__location {
     @include phone {
-      margin: 16px;
+      margin: 1rem;
 
       &:before {
         content: "LOCATION";
         color: $silver;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-weight: 600;
         display: block;
-        margin-bottom: 16px;
+        margin-bottom: 1rem;
       }
     }
 
     @include tablet {
-      font-size: 14px;
-      border-bottom: 1px solid $mercury;
+      font-size: 0.875rem;
+      border-bottom: 0.063rem solid $mercury;
     }
 
     @include desktop {
-      font-size: 14px;
-      border-bottom: 1px solid $mercury;
+      font-size: 0.875rem;
+      border-bottom: 0.063rem solid $mercury;
     }
   }
 
   &__button-row {
     @include phone {
-      margin: 16px;
+      margin: 1rem;
     }
 
     @include tablet {
-      margin: 16px;
-      border-bottom: 1px solid $mercury;
+      margin: 1rem;
+      border-bottom: 0.063rem solid $mercury;
     }
 
     @include desktop {
-      margin: 16px;
-      border-bottom: 1px solid $mercury;
+      margin: 1rem;
+      border-bottom: 0.063rem solid $mercury;
     }
   }
 
   &__button {
-    height: 40px;
+    height: 2.5rem;
     color: $white;
     background-color: $bandsite-black;
-    border-radius: 5px;
+    border-radius: 0.313rem;
     border-image: none;
     border-style: none;
     text-align: center;
@@ -378,19 +378,19 @@ a {
 
     @include phone {
       width: 100%;
-      font-size: 12px;
-      line-height: 20px;
+      font-size: 0.75rem;
+      line-height: 1.25rem;
     }
 
     @include tablet {
       width: 100%;
-      font-size: 12px;
-      line-height: 20px;
+      font-size: 0.75rem;
+      line-height: 1.25rem;
     }
 
     @include desktop {
-      font-size: 12px;
-      line-height: 20px;
+      font-size: 0.75rem;
+      line-height: 1.25rem;
     }
     &:hover {
       background-color: $bandsite-darkblack;
@@ -400,19 +400,19 @@ a {
   &__divide--solid {
     @include phone {
       width: 100%;
-      stroke-width: 1px;
+      stroke-width: 0.063rem;
       color: $mercury;
     }
 
     @include tablet {
       width: 100%;
-      stroke-width: 1px;
+      stroke-width: 0.063rem;
       color: $mercury;
     }
 
     @include desktop {
       width: 100%;
-      stroke-width: 1px;
+      stroke-width: 0.063rem;
       color: $mercury;
     }
   }
